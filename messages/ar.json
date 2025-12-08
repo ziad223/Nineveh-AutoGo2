@@ -1,0 +1,663 @@
+{
+  "error": {
+    "pageNotFound": "الصفحة غير موجودة",
+    "pageNotFoundDesc": "عذراً، الصفحة التي تبحث عنها غير موجودة",
+    "backHome": "العودة للرئيسية",
+    "error": "حدث خطأ",
+    "errorDesc": "عذراً، حدث خطأ ما. يرجى المحاولة مرة أخرى",
+    "tryAgain": "حاول مرة أخرى"
+  },
+  "navbar": {
+    "home" : "الرئيسية",
+    "aboutUs": "نبذة عنا",
+    "categories": "الأقسام",
+    "latestEvents": "الخدمات",
+    "howToOrder": "كيف تطلب ؟",
+    "support": "الدعم الفني",
+    "sellTicket": "بيع خدمتك",
+    "welcome": "مرحبا",
+    "newAccount": "حساب جديد",
+    "login": "تسجيل الدخول"
+  },
+  "sections": {
+    "title": "الأقسام",
+    "description": "نعرض إليك جميع الأقسام لدينا"
+  },
+  "lastestEvents": {
+    "latestEventsTitle": " الخدمات",
+    "latestEventsSubtitle": "انتهز الفرصة وقم بالحجز في أحدث الخدمات",
+    "bookNow": "احجز خدمتك الآن",
+    "noEventsAvailable": "لا توجد أحداث متاحة"
+  },
+  "how": {
+    "howOrderTitle": "كيف تطلب خدمتك ؟",
+    "howOrderSubtitle": "تعرف أكثر على كيفية الحصول على خدمتك بخطوات سهلة وبسيطة"
+  },
+  "contactForm": {
+    "namePlaceholder": "أدخل اسمك كاملاً",
+    "nameRequired": "هذا الحقل مطلوب",
+    "phonePlaceholder": "أدخل رقم الجوال",
+    "phoneRequired": "هذا الحقل مطلوب",
+    "phoneInvalid": "رقم جوال غير صالح",
+    "reasonPlaceholder": "اختر سبب الإرسال (استفسار - شكوى - اقتراح)",
+    "reasonRequired": "هذا الحقل مطلوب",
+    "inquiry": "استفسار",
+    "complaint": "شكوى",
+    "suggestion": "اقتراح",
+    "fileRequired": "اختر الملف",
+    "messagePlaceholder": "أدخل نص رسالتك",
+    "messageRequired": "هذا الحقل مطلوب",
+    "submitButton": "إرسال الرسالة",
+    "filePlaceholder": "إرفاق صور أو ملفات",
+    "fileOptional": "(اختياري)",
+    "filesLabel": "الملفات ({count}):",
+    "removeFile": "حذف الملف",
+    "fileHelp": "يمكنك إرسال صور أو ملفات مع رسالتك للتوضيح"
+  },
+  "technicalSupport": {
+    "title": "الدعم الفني",
+    "description": "يمكنك إرسال استفساراتك ومقترحاتك أو شكواك من خلال ملأ البيانات التالية وإرسال رسالتك",
+    "form": {
+      "fullName": "الاسم كاملا",
+      "phone": "رقم الجوال",
+      "email": "البريد الإلكتروني",
+      "messageType": "اختر نوع الرسالة",
+      "message": "أدخل نص رسالتك",
+      "submit": "إرسال الرسالة",
+      "submitting": "جاري الإرسال...",
+      "success": "تم إرسال رسالتك بنجاح!",
+      "error": "حدث خطأ أثناء إرسال الرسالة"
+    },
+    "messageTypes": {
+      "inquiry": "استفسار",
+      "suggestion": "اقتراح",
+      "complaint": "شكوى"
+    },
+    "validation": {
+      "fullName": "الاسم يجب أن يكون على الأقل 3 أحرف",
+      "event_name": "اسم الفعاليه يجب أن يكون على الأقل 3 أحرف",
+      "phone": "رقم الجوال يجب أن يكون على الأقل 10 أرقام",
+      "email": "البريد الإلكتروني غير صالح",
+      "messageType": "يجب اختيار نوع الرسالة",
+      "message": "الرسالة يجب أن تكون على الأقل 10 أحرف"
+    }
+  },
+  "footer": {
+    "description": "منصة لتبادل وإعادة بيع التذاكر تتيح للمستخدمين تجربة آمنة وسهلة لشراء وبيع التذاكر لمجموعة متنوعة من الخدمات الترفيهية والرياضية والحفلات.",
+    "copyright": "© جميع الحقوق محفوظة -  خبب نينوي 2025",
+    "quickLinks": "روابط سريعة",
+    "aboutUs": "نبذة عنا",
+    "categories": "الأقسام",
+    "events": "الخدمات",
+    "howToOrder": "كيف تطلب؟",
+    "support": "الدعم الفني",
+    "reports": "البلاغات",
+    "login": "تسجيل الدخول",
+    "register": "حساب جديد",
+    "faq": "الأسئلة الشائعة",
+    "terms": "الشروط والأحكام",
+    "privacy": "سياسة الخصوصية",
+    "followUs": "تابعنا عبر الوسائل التالية",
+    "paymentMethods": "طرق الدفع المتاحة"
+  },
+  "event": {
+    "about": "عن الخدمة"
+  },
+  "BookTicket": {
+    "side-by-side" : "مقاعد متجاورة",
+    "startsFrom": "تبدأ من",
+    "loading": "جاري التحميل ...",
+    "noTicketsAvailable": "لا يوجد تذاكر متاحة",
+    "title": "احجز خدمتك الآن",
+    "subtitle": "قم بتحديد الخيارات المناسبة لحجز تذكرتك",
+    "selectTickets": "حدد عدد التذاكر",
+    "selectCategory": "حدد الفئة المطلوبة",
+    "adjacentTickets": "التذاكر تكون مجاورة",
+    "availableTickets": "التذاكر المتاحة",
+    "category1": "الفئة 1",
+    "ticketsCount": "+{count} تذاكر",
+    "seatsRange": "( C 30-31-32-33-34-35 )",
+    "adjacentSeats": "مقاعد متجاورة",
+    "buy": "شراء",
+    "errors": {
+      "loadCategoriesFailed": "فشل تحميل الفئات",
+      "loadTicketsFailed": "فشل تحميل التذاكر",
+      "ticketsRequired": "التذاكر مطلوبة",
+      "categoryRequired": "التصنيفات مطلوبة"
+    },
+    "cities": {
+      "riyadh": "الرياض",
+      "jeddah": "جدة",
+      "dammam": "الدمام"
+    }
+  },
+  "sellYourTicket": {
+     "seatNote": "ملاحظة: رقم المقعد لا يظهر في معلومات التذكرة المعروضة للبيع، فقط لتحديد التذاكر المتجاورة.",
+    "block_numberEnter" : "أدخل رقم المربع",
+    "common": {
+      "ok": "حسناً"
+    },
+    "selectEvent": "اختر الخدمة",
+    "selectTicketCountLabel": "أختر عدد التذاكر",
+    "ticketInfoTitle": "بيانات التذكرة {number}",
+    "ticketImage": "صورة التذكرة",
+    "ticketImageDescription": "قم برفع صورة التذكرة الخاصة بك التى تريد عرضها للبيع",
+    "selectStand": "اختر نوع/فئة التذكرة",
+    "enterRowNumber": "أدخل رقم الصف",
+    "enterSeatNumber": "أدخل رقم المقعد",
+    "enterTicketPrice": "أدخل سعر التذكرة",
+    "adjacentTitle": "حدد إذا كانت التذاكر متجاورة أم لا",
+    "selectAdjacent": "اختر التذاكر متجاورة / غير متجاورة",
+    "adjacentOptions": {
+      "yes": "متجاورة",
+      "no": "غير متجاورة"
+    },
+    "specifyAdjacentSeats": "حدد المقاعد المتجاورة",
+    "agreeText": "نعم، أوافق على جميع",
+    "termsAndConditions": "الشروط والأحكام",
+    "submitButton": "عرض التذاكر للبيع",
+    "submitting": "جاري المعالجة...",
+    "successModal": {
+      "title": "تم عرض تذكرتك للبيع!",
+      "message": "قم بمتابعة تفاصيل طلبك وعروض المشتريين من قائمة المبيعات"
+    },
+    "walletModal": {
+      "title": "إنشاء المحفظة",
+      "description": "سيتم إنشاء محفظة حسابك تلقائيا لاستقبال أموال بيع تذاكرك",
+      "warning": "يجب إنشاء المحفظة لاستكمال عملية بيع التذاكر",
+      "formTitle": "ادخل بيانات حسابك البنكي لربط محفظتك به",
+      "selectBank": "أدخل أسم البنك",
+      "accountName": "أدخل اسم الحساب",
+      "iban": "أدخل رقم الآيبان",
+      "submitButton": "تأكيد البيانات",
+      "successTitle": "تم إنشاء المحفظة بنجاح!",
+      "successMessage": "يمكنك الآن متابعة عملية بيع التذاكر الخاصة بك"
+    },
+    "banks": {
+      "nbe": "البنك الأهلي المصري",
+      "banquemisr": "بنك مصر",
+      "alexbank": "بنك أسكندرية"
+    },
+    "stands": {
+      "riyadh": "الرياض",
+      "jeddah": "جدة",
+      "dammam": "الدمام"
+    },
+    "selectEventFirst": "يجب اختيار الخدمة أولاً",
+    "errors": {
+      "eventRequired": "يجب اختيار الخدمة",
+      "ticketCountRequired": "يجب تحديد عدد التذاكر",
+      "adjacentRequired": "يجب تحديد إذا كانت التذاكر متجاورة",
+      "standRequired": "يجب اختيار نوع التذكرة",
+      "rowRequired": "يجب إدخال رقم الصف",
+      "seatRequired": "يجب إدخال رقم المقعد",
+      "priceRequired": "يجب إدخال سعر التذكرة",
+      "fetchEventsFailed": "حدث خطأ أثناء جلب الخدمات",
+      "submitFailed": "حدث خطأ أثناء عرض التذاكر للبيع",
+      "termsRequired": "يجب الموافقة علي الشروط والاحكام",
+      "selectEventFirst": "يجب اختيار الخدمة قبل اختيار المقصورة",
+      "rowNumberRequired": "رقم الصف مطلوب",
+      "seatNumberRequired": "رقم المقعد مطلوب",
+      "invalidPriceFormat": "يجب أن يكون السعر رقمًا صحيحًا"
+    },
+    "success": {
+      "ticketSubmitted": "تم عرض التذاكر للبيع بنجاح!"
+    }
+  },
+  "standTickets": {
+    "blockNumber" : "المربع : " ,
+    "addToCart": "أضف إلى السلة",
+    "title": "تذاكر المقاعد",
+    "stand": "الفئة",
+    "row": "الصف",
+    "seat": "المقعد",
+    "bookNow": "احجز الآن",
+    "backToEvent": "العودة إلى الحدث",
+    "selectTickets": "اختر عدد التذاكر",
+    "selectCategory": "اختر الفئة",
+    "adjacentTickets": "التذاكر تكون متجاورة",
+    "numberadjacentTickets": "عدد التذاكر المتجاورة",
+    "selected": "محدد",
+    "clickToSelect": "اضغط لتحديد",
+    "selectedTicketsCount": "تم تحديد {count} تذاكر",
+    "totalPrice": "السعر الإجمالي",
+    "bookingInProgress": "جاري الحجز...",
+    "bookingSuccess": "تم حجز التذاكر بنجاح!",
+    "errors": {
+      "noTicketsAvailable": "لا توجد تذاكر متاحة حاليًا",
+      "loadTicketsFailed": "فشل تحميل التذاكر، يرجى المحاولة مرة أخرى"
+    },
+    "ticketsCount" : "عدد التذاكر"
+  },
+  "Payment": {
+  "checkout": {
+    "title": "الدفع وإنهاء الطلب",
+    "subtitle": "اختر طريقة الدفع المناسبة لإنهاء الطلب",
+    "price" : "السعر"
+  },
+    "couponApplied": "تم تطبيق الكوبون بنجاح!",
+    "couponError": "خطأ في تطبيق الكوبون",
+    "enterCoupon": "الرجاء إدخال كود الكوبون",
+    "enterCouponPlaceholder": "أدخل كوبون خصم إذا لديك",
+    "verifying": "جاري التحقق...",
+    "verify": "تحقق",
+    "paymentDetails": "تفاصيل فاتورة الدفع",
+    "ticketCount": "عدد التذاكر",
+    "price": "السعر",
+    "discount": "الخصم",
+    "total": "الإجمالي",
+    "paymentAndComplete": "الدفع وإنهاء الطلب",
+    "choosePaymentMethod": "اختر طريقة الدفع المناسبة لإنهاء الطلب",
+    "ticketEmail": "البريد الإلكتروني لاستلام التذكرة",
+    "confirmPayment": "تأكيد الدفع",
+    "paymentSuccess": "تابع عملية الشراء",
+    "invalidEmails": "البريد الإلكتروني غير صحيح"
+  },
+  "Checkout": {
+    "blockNumber" : "المربع",
+    "seat": "المقعد",
+    "row": "الصف",
+    "title": "استكمال الطلب",
+    "subtitle": "قم بمراجعة طلبك والدفع لاستكمال طلبك",
+    "selectedTickets": "التذاكر التي تم تحديدها للشراء",
+    "ticketCount": "عدد التذاكر",
+    "adjacent": "متجاورة ؟",
+    "adjacentYes": "مقاعد متجاورة",
+    "adjacentNo": "مقاعد غير متجاورة",
+    "price" : "السعر" 
+  },
+  "Event": {
+    "competition": "كأس العالم للأندية"
+  },
+  "Stand": {
+    "stand": "الفئة",
+    "seat": "المقعد"
+  },
+  "Login": {
+    "mobile_placeholder": "رقم الجوال",
+    "mobile_invalid": "يجب أن يبدأ رقم الجوال بـ 05 ويتكون من 10 أرقام",
+    "otp_sent": "تم إرسال كود التحقق إلى هاتفك المحمول",
+    "login_error": "حدث خطأ أثناء تسجيل الدخول",
+    "logging_in": "جاري تسجيل الدخول...",
+    "login": "تسجيل الدخول"
+  },
+  "LoginPage": {
+    "login_image_alt": "رسم توضيحي لتسجيل الدخول",
+    "login_title": "تسجيل الدخول",
+    "login_subtitle": "قم بإدخال بيانات حسابك لتسجيل الدخول",
+    "no_account": "ليس لديك حساب على خبب نينوي ؟",
+    "create_account": "إنشاء حساب جديد"
+  },
+  "RegisterPage": {
+    "login_button": "تسجيل الدخول إلى حساب موجود",
+    "name_placeholder": "اسم المستخدم",
+    "name_icon_alt": "أيقونة المستخدم",
+    "name_min_length": "يجب أن يكون اسم المستخدم 3 أحرف على الأقل",
+    "mobile_placeholder": "رقم الجوال",
+    "mobile_icon_alt": "أيقونة الهاتف",
+    "mobile_format": "يجب أن يبدأ رقم الجوال بـ 05 ويتكون من 10 أرقام",
+    "email_placeholder": "البريد الإلكتروني",
+    "email_icon_alt": "أيقونة البريد",
+    "invalid_email": "بريد إلكتروني غير صالح",
+    "city_placeholder": "اختر المدينة التابعة لك",
+    "city_icon_alt": "أيقونة الموقع",
+    "city_required": "يجب اختيار المدينة",
+    "terms_agree": "نعم، أوافق على جميع",
+    "terms_link": "الشروط والأحكام",
+    "terms_required": "يجب الموافقة على الشروط والأحكام",
+    "otp_sent": "تم إرسال كود التحقق إلى هاتفك المحمول",
+    "register_error": "حدث خطأ أثناء إنشاء الحساب",
+    "creating_account": "جاري الإنشاء...",
+    "create_account": "إنشاء الحساب",
+    "register_title": "إنشاء حساب جديد",
+    "register_subtitle": "قم بإدخال البيانات التالية لاستكمال تسجيل حسابك",
+    "existing_account": "لديك حساب بالفعل على خبب نينوي ؟",
+     "enter_password_placeholder": "أدخل كلمة المرور",
+  "confirm_password_placeholder": "تأكيد كلمة المرور",
+  "click_to_upload": "اضغط للرفع",
+  "drag_or_click_here": "أو اسحب الصورة هنا",
+  "image_size_format": "PNG, JPG, JPEG (بحد أقصى 2MB)",
+  "create_account_button": "إنشاء حساب كشركة",
+  "register_as_client" : "تسجيل كعميل",
+  "register_as_company" : "تسجيل كشركة"
+  },
+  "sells": {
+    "sales_title": "المبيعات",
+    "sales_subtitle": "قائمة طلبات مبيعات التذاكر الخاصة بك",
+    "no_sales_title": "لا توجد لديك طلبات",
+    "no_sales_subtitle": "لا توجد لديك أي طلبات بيع تذاكر سابقة",
+    "newRequest": "طلب جديد",
+    "accepted": "مقبول",
+    "rejected": "مرفوض",
+    "default": "غير معروف",
+    "category": "فئة التذاكر",
+    "listedPrice": "السعر المعروض",
+    "askingPrice": "السعر المطلوب للبيع",
+    "viewDetails": "عرض تفاصيل الطلب",
+      "newRequest": "طلب جديد",
+  "accepted": "تم القبول",
+  "rejected": "مرفوض",
+  "default": "غير معروف",
+  "category": "الفئة",
+  "listedPrice": "السعر المدرج",
+  "askingPrice": "السعر المطلوب",
+  "viewDetails": "عرض التفاصيل",
+  "not_available": "غير متاح",
+  "buyer": "المشتري",
+  "tickets": "عدد التذاكر",
+   "ongoingOrders": "طلبات جارية",
+  "finishedOrders": "طلبات منتهية"
+  },
+  "orderDetails": {
+    "ticketImage": "صورة التذكرة",
+    "orderDetails": "تفاصيل الطلب",
+    "ticketsCount": "عدد التذاكر : {count}",
+    "ticketsCategory": "فئة التذاكر : {category}",
+    "rowNumber": "رقم الصف : {number}",
+    "seatNumber": "رقم المقعد : {number}",
+    "adjacentSeats": "مقاعد متجاورة",
+    "ticketPrice": "سعر التذكرة",
+    "requestedPrice": "السعر المطلوب للبيع",
+    "blockNumber" : "المربع : {number}"
+  },
+  "clientControls": {
+    "editRequest": "تعديل الطلب",
+    "cancelRequest": "إلغاء الطلب",
+    "confirmSendTicket": "تأكيد إرسال التذكرة للمشتري",
+    "cancelSuccess": "تم إلغاء الطلب!",
+    "sendSuccess": "تم إرسال التذكرة للمشتري!"
+  },
+  "acceptOrder": {
+    "title": "قبول الطلب",
+    "message": "هل أنت متأكد من أنك تريد قبول بيع التذكرة لهذا المشتري؟",
+    "confirm": "تأكيد قبول البيع",
+    "processing": "جاري المعالجة...",
+    "success": "تم قبول الطلب بنجاح",
+    "error": "حدث خطأ أثناء قبول الطلب"
+  },
+  "confirmationModal": {
+    "title": "إلغاء الطلب",
+    "message": "هل أنت متأكد من إلغاء طلب بيع هذه التذكرة ؟",
+    "confirmButton": "تأكيد الإلغاء",
+    "successMessage": "تم حذف التذكرة بنجاح.",
+    "errorMessage": "حدث خطأ ما. حاول مرة أخرى."
+  },
+  "priceRequests": {
+    "titleWithBuyers": "طلبات الشراء",
+    "titleWithoutBuyers": "بيانات المشتري",
+    "noRequestsTitle": "لا توجد لديك طلبات",
+    "noRequestsDesc": "لا توجد لديك أي طلبات شراء لهذه التذكرة",
+    "buyerName": "اسم المشتري",
+    "email": "البريد الإلكتروني",
+    "accept": "قبول",
+    "reject": "رفض",
+    "copied": "تم النسخ"
+  },
+  "RejectConfirmModal": {
+    "title": "رفض الطلب",
+    "description": "هل أنت متأكد من أنك تريد رفض طلب شراء التذكرة؟",
+    "confirmReject": "تأكيد رفض البيع",
+    "loading": "جاري المعالجة..."
+  },
+  "orders": {
+    "blockNumber" : "المربع",
+    "row": "الصف",
+    "seat": "المقعد",
+    "title": "الطلبات",
+    "description": "تفاصيل طلبات التذاكر الخاصة بك",
+    "noOrders": "لا توجد لديك طلبات",
+    "noOrdersDescription": "لا توجد لديك أي طلبات تذاكر سابقة",
+    "invoiceDetails": "تفاصيل فاتورة الدفع",
+    "discount": "الخصم",
+    "total": "الإجمالي",
+    "price": "السعر",
+    "cardHolder": "صاحب البطاقة",
+    "cardNumber": "رقم البطاقة",
+    "errorLoadingOrder": "حدث خطأ أثناء جلب بيانات الطلب",
+    "orderDetails": "تفاصيل الطلب",
+    "referenceNumber": "رقم المرجع",
+    "orderDate": "تاريخ الطلب",
+    "statusCompleted": "مكتمل",
+    "statusPending": "قيد الانتظار",
+    "selectedTickets": "التذاكر التي تم تحديدها للشراء",
+    "ticketCount": "عدد التذاكر",
+    "adjacentSeats": "مقاعد متجاورة؟",
+    "adjacent": "مقاعد متجاورة",
+    "notAdjacent": "مقاعد غير متجاورة",
+    "ticketEmail": "البريد الإلكتروني لاستلام التذكرة",
+    "ticketNumber": "رقم التذكرة",
+    "gate": "البوابة",
+    "category": "الفئة",
+   
+    "gateOpensAt": "تفتح البوابة في الساعة",
+    "am": "ص",
+    "downloadTicket": "تحميل التذكرة",
+    "paymentDetails": "تفاصيل فاتورة الدفع",
+    "paymentMethod": "طريقة الدفع",
+    "errorFetchingOrder": "حدث خطأ أثناء جلب بيانات الطلب",
+    "tabs": {
+      "pending": "في انتظار القبول",
+      "completed": "الطلبات المؤكدة"
+    },
+    "status": {
+      "pending": "في انتظار",
+      "completed": "مكتمل"
+    },
+    "loading": "جاري تحميل الطلبات...",
+    "reference_number": "رقم الطلب المرجعي",
+    "order_date": "تاريخ الطلب",
+    "view_details": "عرض تفاصيل الطلب",
+    "no_orders": "لا توجد طلبات في هذا القسم",
+    
+    "no_orders_title": "لا توجد لديك طلبات",
+    "no_orders_subtitle": "لا توجد لديك أي طلبات تذاكر سابقة"
+  },
+  "editRequestModal": {
+    "title": "تعديل سعر الطلب",
+    "newPrice": "السعر الجديد",
+    "pricePlaceholder": "أدخل السعر الجديد",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "invalidPrice": "من فضلك أدخل سعرًا صحيحًا أكبر من 0",
+    "priceUpdated": "تم تعديل السعر إلى:",
+    "somethingWentWrong": "حدث خطأ ما. حاول مرة أخرى."
+  },
+  "wallet": {
+    "validations": {
+      "bank_name_required": "اختر البنك",
+      "name_required": "الاسم مطلوب",
+      "number_required": "رقم الحساب مطلوب",
+      "iban_required": "رقم الآيبان مطلوب"
+   
+    },
+    "confirmation": {
+    "title": "تم إنشاء محفظتك",
+    "message": "تم إنشاء محفظتك بنجاح يمكنك متابعة الرصيد وطلب سحب النقود",
+    "button": "حسناً"
+  },
+        "withdraw_instruction": "قم بكتابة المبلغ المراد سحبه من المحفظة لتحويله إلى حسابك البنكي",
+    "amount_placeholder": "أدخل المبلغ بالريال",
+    "send_request": "إرسال الطلب",
+   
+
+        
+    "wallet_balance": "رصيد محفظتك",
+    "withdraw_request": "طلب سحب",
+    "wallet_history": "سجل العمليات",
+    "add_button": "إضافة الحساب البنكي",
+    "add_account": "إضافة الحساب البنكي",
+    "bankdescription": "ادخل بيانات حسابك البنكي لربط محفظتك به",
+    "bank_name": "أدخل أسم البنك",
+    "name": "أدخل اسم الشخص",
+    "number": "أدخل رقم الحساب",
+    "iban": "أدخل رقم الآيبان",
+    "confirm": "تأكيد البيانات",
+    "success": "تم ربط الحساب البنكي بنجاح",
+    "error": "حدث خطأ أثناء ربط الحساب البنكي",
+    "messages": {
+      "deposit_content": "تمت إضافة مبلغ إلى محفظتك"
+    },
+    "title": "المحفظة",
+    "description": "قم بمتابعة رصيد محفظتك في حال بيع التذاكر",
+    "noBankTitle": "لم تقم بربط محفظتك",
+    "noBankDescription": "قم بربط محفظتك بحسابك البنكي لتتمكن من طلب سحب النقود"
+  },
+  "Logout": {
+    "title": "تسجيل الخروج",
+    "description": "هل أنت متأكد من تسجيل الخروج من حسابك ؟",
+    "confirm": "تأكيد الخروج",
+    "successMessage": "تم تسجيل الخروج بنجاح",
+    "failMessage": "فشل تسجيل الخروج"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "description": "مركز الإشعارات الخاصة بحسابك",
+    "emptyTitle": "لا توجد لديك إشعارات",
+    "emptyDescription": "لا توجد لديك إشعارات خاصة بحسابك بالوقت الحالي"
+  },
+  "DeleteAccountOTP": {
+    "verificationCode": "كود التحقق",
+    "verificationMessage": "قم بإدخال كود التحقق الذي تم إرساله إليك عبر رقم الجوال",
+    "verifyButton": "تحقق",
+    "verifying": "جاري التحقق...",
+    "resendCode": "إعادة إرسال الكود",
+    "requestNewCode": "يمكنك طلب كود آخر بعد",
+    "successMessage": "تم التحقق بنجاح",
+    "errorMessage": "حدث خطأ أثناء التحقق",
+    "verificationFailed": "فشل التحقق، يرجى المحاولة مرة أخرى",
+    "newCodeSent": "تم إرسال كود جديد إلى هاتفك",
+    "invalidCode": "الرجاء إدخال كود التحقق المكون من 6 أرقام"
+  },
+  "DeleteAccount": {
+    "title": "تأكيد حذف الحساب",
+    "description": "هل أنت متأكد أنك تريد حذف حسابك نهائيًا؟",
+    "deleteButton": "حذف الحساب",
+    "cancelButton": "لا شكرًا",
+    "removeAlt": "حذف الحساب",
+    "fetchError": "فشل في جلب بيانات المستخدم",
+    "codeSent": "تم إرسال كود حذف الحساب",
+    "actionFailed": "لا يمكن تنفيذ العملية حالياً",
+    "deleteError": "لا يمكن حذف الحساب ولديك طلبات غير مكتملة",
+    "unexpectedError": "حدث خطأ غير متوقع",
+    "wallet_balance": "رصيد المحفظة",
+    "withdraw_request": "طلب سحب",
+    "wallet_history": "سجل العمليات",
+    "request_sent_successfully": "تم إرسال الطلب بنجاح",
+    "request_error": "حدث خطأ أثناء إرسال الطلب. حاول مرة أخرى.",
+    "withdraw_instruction": "قم بكتابة المبلغ المراد سحبه من المحفظة لتحويله إلى حسابك البنكي",
+    "amount_placeholder": "أدخل المبلغ بالريال",
+    "send_request": "إرسال الطلب",
+    "close": "إغلاق"
+  },
+  "UserDropdown": {
+    "my-tickets" : "تذاكري",
+    "editProfile": "تعديل بياناتي",
+    "notifications": "الاشعارات",
+    "orders": "الطلبات",
+    "sales": "المبيعات",
+    "wallet": "المحفظة",
+    "logout": "تسجيل الخروج",
+    "deleteAccount": "حذف الحساب",
+    "aa" : "تذاكري"
+ 
+  },
+  
+  "events": {
+    "allEvents": "إليك جميع الخدمات الخاصة بهذا القسم"
+  },
+  "CitySelect": {
+    "loading": "جاري تحميل المدن...",
+    "placeholder": "اختر مدينة الخدمة"
+  },
+  "SendTicketModal": {
+    "title": "تأكيد إرسال التذكرة للمشتري",
+    "description": "قم بإرفاق صورة التذكرة لإتمام عملية تأكيد البيع",
+    "imageTitle": "صورة التذكرة",
+    "imageDescription": "قم برفع صورة الإرسال من ويبوك أو صورة محادثة أو إيميل الإرسال أو أخرى",
+    "confirmButton": "تأكيد الإرسال",
+  "loadingButton": "جاري الرفع..."
+  },
+   "order": {
+    "orderDetailsTitle": "تفاصيل الطلب",
+    "publishDate": "تاريخ النشر",
+    "notAvailable": "غير متوفر",
+    "ticketsCategory" : "فئة التذاكر ",
+    "rowNumber" : "رقم الصف",
+    "seatNumber" : "رقم المقعد"
+},
+  "sell": {
+    "title": "بيع خدمتك",
+    "description": "إذا كان لديك تذكرة لا تريد استخدامها يمكنك عرضها للبيع"
+  },
+  "otpCode" : {
+    "title" : "كود التحقق",
+    "desc" : "قم بإدخال كود التحقق الذي تم إرساله إليك عبر رقم الجوال"
+  },
+  "my-tickets" : {
+    "noTickets" : "لا توجد تذاكر متاحة حالياً.",
+    "square" : "المربع",
+    "sar" : "ريال سعودي",
+
+      "myTickets": "تذاكري",
+  "ticketCategory": "الفئة",
+  "row": "الصف",
+  "seat": "المقعد",
+  "price": "السعر",
+  "status": "الحالة",
+  "paid": "مدفوع",
+  "pending": "قيد الانتظار",
+  "note": "ملاحظة: رقم المقعد لا يظهر في معلومات التذكرة المعروضة للبيع، فقط لتحديد التذاكر المتجاورة."
+
+  },
+   "CancelTicketModal": {
+    "title": "إلغاء التذكرة",
+    "confirmation": "هل أنت متأكد أنك تريد إلغاء التذكرة رقم {ticketId}؟",
+    "close": "إغلاق",
+    "confirm": "تأكيد",
+    "loading": "جارٍ الإلغاء...",
+    "success": "تم إلغاء التذكرة بنجاح ✅",
+    "error": "حدث خطأ أثناء إلغاء التذكرة ❌"
+  },
+  "EditTicketModal": {
+    "title": "تعديل التذكرة",
+    "subtitle": "تعديل بيانات التذكرة رقم {ticketId}",
+    "seatNumber": "رقم المقعد",
+    "rowNumber": "رقم الصف",
+    "blockNumber": "رقم المربع",
+    "price": "سعر التذكرة",
+    "stand": "اختر الفئة",
+    "standPlaceholder": "اختر الفئة",
+    "ticketImage": "صورة التذكرة",
+    "chooseImage": "اضغط هنا لاختيار صورة",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "loading": "جاري الحفظ...",
+    "success": "تم تعديل التذكرة بنجاح",
+    "error": "حدث خطأ أثناء تعديل التذكرة"
+  },
+   "PaymentStatusModal": {
+    "successTitle": "تم الدفع بنجاح",
+    "successDescription": "تمت معالجة دفعتك بنجاح.",
+    "title": "فشل الدفع",
+    "description": "حدثت مشكلة أثناء الدفع. يرجى المحاولة مرة أخرى.",
+    "ok": "موافق"
+  },
+    "company_name_placeholder": "اسم الشركة",
+  "company_name_alt": "اسم الشركة",
+  "email_placeholder": "البريد الإلكتروني",
+  "email_alt": "البريد الإلكتروني",
+  "mobile_placeholder": "رقم الجوال",
+  "mobile_alt": "رقم الجوال",
+  "city_placeholder": "اختر المدينة",
+  "city_alt": "المدينة",
+  "license_number_placeholder": "رقم السجل التجاري",
+  "license_number_alt": "رقم السجل التجاري",
+  "description_placeholder": "نبذة عن الشركة",
+  "description_alt": "نبذة عن الشركة",
+  "password_placeholder": "أدخل كلمة المرور",
+  "confirm_password_placeholder": "تأكيد كلمة المرور",
+  "click_to_upload": "اضغط للرفع",
+  "drag_or_click_here": "أو اسحب الصورة هنا",
+  "image_size_format": "PNG, JPG, JPEG (بحد أقصى 2MB)",
+  "create_account_button": "إنشاء حساب كشركة"
+}

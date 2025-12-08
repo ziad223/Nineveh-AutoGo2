@@ -1,0 +1,674 @@
+{
+  "error": {
+    "pageNotFound": "Page Not Found",
+    "pageNotFoundDesc": "Sorry, the page you are looking for does not exist",
+    "backHome": "Back to Home",
+    "error": "Error Occurred",
+    "errorDesc": "Sorry, something went wrong. Please try again",
+    "tryAgain": "Try Again"
+  },
+  "contactForm": {
+    "namePlaceholder": "Enter your full name",
+    "nameRequired": "This field is required",
+    "phonePlaceholder": "Enter your phone number",
+    "phoneRequired": "This field is required",
+    "phoneInvalid": "Invalid phone number",
+    "reasonPlaceholder": "Select reason (Inquiry - Complaint - Suggestion)",
+    "reasonRequired": "This field is required",
+    "inquiry": "Inquiry",
+    "complaint": "Complaint",
+    "suggestion": "Suggestion",
+    "fileRequired": "Please select file",
+    "messagePlaceholder": "Enter your message",
+    "messageRequired": "This field is required",
+    "submitButton": "Send Message",
+    "filePlaceholder": "Attach images or files",
+    "fileOptional": "(optional)",
+    "filesLabel": "Files ({count}):",
+    "removeFile": "Remove file",
+    "fileHelp": "You can send images or files with your message for clarification"
+  },
+  "navbar": {
+    "home" : "Home",
+    "aboutUs": "About Us",
+    "categories": "Categories",
+    "latestEvents": "Services",
+    "howToOrder": "How to Order?",
+    "support": "Support",
+    "sellTicket": "Sell Your Service",
+    "welcome": "Welcome",
+    "newAccount": "Create Account",
+    "login": "Login"
+  },
+  "sections": {
+    "title": "Categories",
+    "description": "Browse all our categories"
+  },
+  "lastestEvents": {
+    "latestEventsTitle": "Services",
+    "latestEventsSubtitle": "Take the chance and book the latest Services",
+    "bookNow": "Book your Service now",
+    "noEventsAvailable": "No Services Avaiable"
+  },
+  "how": {
+    "howOrderTitle": "How to Order Your Service?",
+    "howOrderSubtitle": "Learn how to get your Service in easy and simple steps"
+  },
+  "technicalSupport": {
+    "title": "Technical Support",
+    "description": "You can send your inquiries, suggestions or complaints by filling out the following data and sending your message",
+    "form": {
+      "fullName": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "messageType": "Select Message Type",
+      "message": "Enter your message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred while sending the message"
+    },
+    "messageTypes": {
+      "inquiry": "Inquiry",
+      "suggestion": "Suggestion",
+      "complaint": "Complaint"
+    },
+    "validation": {
+      "fullName": "Name must be at least 3 characters",
+      "event_name": "Event Name must be at least 3 characters",
+      "phone": "Phone must be at least 10 numbers",
+      "email": "Invalid email address",
+      "messageType": "Please select a message type",
+      "message": "Message must be at least 10 characters"
+    }
+  },
+  "footer": {
+    "description": "A platform for exchanging and reselling Services that provides users with a safe and easy experience to buy and sell Services for a variety of entertainment, sports, and concert Services.",
+    "copyright": "© All rights reserved - Nineveh AutoGo  2025",
+    "quickLinks": "Quick Links",
+    "aboutUs": "About Us",
+    "reports": "Reports",
+    "categories": "Categories",
+    "events": "Services",
+    "howToOrder": "How to Order?",
+    "support": "Technical Support",
+    "login": "Login",
+    "register": "New Account",
+    "faq": "FAQ",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "followUs": "Follow us on social media",
+    "paymentMethods": "Available payment methods"
+  },
+  "event": {
+    "about": "About the Event"
+  },
+  "BookTicket": {
+    "side-by-side" : "Side-by-side",
+        "startsFrom": "Starts from",
+
+    "noTicketsAvailable": "No Services Available",
+    "loading": "loading ...",
+
+    "title": "Book your Service now",
+    "subtitle": "Choose the appropriate options to book your ticket",
+    "selectTickets": "Select number of Services",
+    "selectCategory": "Select desired category",
+    "adjacentTickets": "Services will be adjacent",
+    "availableTickets": "Available Services",
+    "category1": "Category 1",
+    "ticketsCount": "+{count} Services",
+    "seatsRange": "( C 30-31-32-33-34-35 )",
+    "adjacentSeats": "Adjacent seats",
+    "buy": "Buy",
+    "errors": {
+      "loadCategoriesFailed": "Failed to load categories"
+    },
+    "cities": {
+      "riyadh": "Riyadh",
+      "jeddah": "Jeddah",
+      "dammam": "Dammam"
+    }
+  },
+  "sellYourTicket": {
+        "block_numberEnter" : "Enter Block Number",
+          "seatNote": "Note: The seat number does not appear in the Service information displayed for sale, it is only used to identify adjacent tickets."
+,
+    "common": {
+      "ok": "OK"
+    },
+    "selectEvent": "Select Event",
+    "selectTicketCountLabel": "Select number of Services",
+    "ticketInfoTitle": "Service {number} Information",
+    "ticketImage": "Service Image",
+    "ticketImageDescription": "Upload your Service image that you want to sell",
+    "selectStand": "Select Service type/category",
+    "enterRowNumber": "Enter row number",
+    "enterSeatNumber": "Enter seat number",
+    "enterTicketPrice": "Enter Service price",
+    "adjacentTitle": "Specify if Service are adjacent",
+    "selectAdjacent": "Select adjacent/not adjacent",
+    "adjacentOptions": {
+      "yes": "Adjacent",
+      "no": "Not adjacent"
+    },
+    "specifyAdjacentSeats": "Specify adjacent seats",
+    "agreeText": "Yes, I agree to all",
+    "termsAndConditions": "Terms and Conditions",
+    "submitButton": "Submit Tickets for Sale",
+    "submitting": "Processing...",
+    "successModal": {
+      "title": "Your ticket has been listed for sale!",
+      "message": "Follow your order details and buyer offers from the sales list"
+    },
+    "walletModal": {
+      "title": "Create Wallet",
+      "description": "Your account wallet will be automatically created to receive your ticket sales money",
+      "warning": "You must create a wallet to complete the ticket sale process",
+      "formTitle": "Enter your bank account details to link to your wallet",
+      "selectBank": "Select Bank",
+      "accountName": "Enter account name",
+      "iban": "Enter IBAN number",
+      "submitButton": "Confirm Data",
+      "successTitle": "Wallet created successfully!",
+      "successMessage": "You can now proceed with your ticket sales process"
+    },
+    "banks": {
+      "nbe": "National Bank of Egypt",
+      "banquemisr": "Banque Misr",
+      "alexbank": "Alexandria Bank"
+    },
+    "stands": {
+      "riyadh": "Riyadh",
+      "jeddah": "Jeddah",
+      "dammam": "Dammam"
+    },
+    "selectEventFirst": "You must select an event first",
+
+    "errors": {
+      "eventRequired": "Please select an event",
+      "ticketCountRequired": "Please select number of tickets",
+      "adjacentRequired": "Please specify if tickets are adjacent",
+      "standRequired": "Please select ticket type",
+      "rowRequired": "Please enter row number",
+      "seatRequired": "Please enter seat number",
+      "priceRequired": "Please enter ticket price",
+      "fetchEventsFailed": "Failed to load Services",
+      "submitFailed": "Failed to submit tickets",
+      "termsRequired": "Terms and Conditions must be accepted.",
+      "  ": "Please select an event before choosing a stand",
+      "rowNumberRequired": "Row number is required",
+      "invalidPriceFormat": "Price must be a valid number",
+      "loadTicketsFailed": "Load Tickets Failed",
+      "ticketsRequired": "Ticket Required",
+      "categoryRequired": "Category Required"
+    },
+    "success": {
+      "ticketSubmitted": "Tickets submitted successfully!"
+    }
+  },
+  "standTickets": {
+    "blockNumber" : "Square" ,
+    "title": "Seat Tickets",
+    "selected": "Selected",
+    "clickToSelect": "Click to select",
+    "selectedTicketsCount": "Selected {count} tickets",
+    "totalPrice": "Total price",
+    "bookingInProgress": "Booking in progress...",
+    "bookingSuccess": "Tickets booked successfully!",
+    "selectTickets": "Select tickets count",
+    "selectCategory": "Select category",
+    "adjacentTickets": "Tickets will be adjacent",
+    "numberadjacentTickets": "Number of adjacent tickets",
+    "stand": "Category",
+    "row": "Row",
+    "seat": "Seat",
+    "bookNow": "Book Now",
+    "backToEvent": "Back to Event",
+    "addToCart": "Add To Cart",
+    "errors": {
+      "noTicketsAvailable": "No tickets currently available",
+      "loadTicketsFailed": "Failed to load tickets, please try again",
+      "noTicketsSelected": "Please select at least one ticket to book",
+      "bookingFailed": "Failed to book tickets, please try again"
+    }
+  },
+  "Payment": {
+     "checkout": {
+    "title": "Payment & Checkout",
+    "subtitle": "Choose the suitable payment method to complete your order",
+    "price" : "Price"
+  },
+    "couponApplied": "Coupon applied successfully!",
+    "couponError": "Error applying coupon",
+    "enterCoupon": "Please enter a coupon code",
+    "enterCouponPlaceholder": "Enter discount coupon if you have one",
+    "verifying": "Verifying...",
+    "verify": "Verify",
+    "paymentDetails": "Payment Invoice Details",
+    "ticketCount": "Number of tickets",
+    "price": "Price",
+    "discount": "Discount",
+    "total": "Total",
+    "paymentAndComplete": "Payment and Complete Order",
+    "choosePaymentMethod": "Choose the appropriate payment method to complete the order",
+    "ticketEmail": "Email to receive the ticket",
+    "paymentSuccess": "Follow the purchase process",
+    "confirmPayment": "Confirm Payment",
+    "invalidEmails": "Invalid Email"
+  },
+  "Checkout": {
+        "blockNumber" : "Block Number" ,
+    "seat": "seat",
+    "row": "row",
+    "title": "Complete Order",
+    "subtitle": "Review and pay to complete your order",
+    "selectedTickets": "Selected Tickets for Purchase",
+    "ticketCount": "Number of Tickets",
+    "adjacent": "Adjacent?",
+    "adjacentYes": "Adjacent Seats",
+    "adjacentNo": "Non-Adjacent Seats",
+    "price" : "Price"
+
+  },
+  "Event": {
+    "competition": "FIFA Club World Cup"
+  },
+  "Stand": {
+    "stand": "Category",
+    "seat": "Seat"
+  },
+  "selectedTickets": "Selected Tickets for Purchase",
+  "ticketCount": "Number of Tickets",
+  "adjacent": "Adjacent?",
+  "adjacentNo": "Non-Adjacent Seats",
+
+  "Login": {
+    "mobile_placeholder": "Mobile number",
+    "mobile_invalid": "Mobile must start with 05 and be 10 digits",
+    "otp_sent": "Verification code sent to your mobile",
+    "login_error": "Error during login",
+    "logging_in": "Logging in...",
+    "login": "Login"
+  },
+  "LoginPage": {
+    "login_image_alt": "Login illustration",
+    "login_title": "Login",
+    "login_subtitle": "Enter your account details to login",
+    "no_account": "Don't have an account on Koora Tact?",
+    "create_account": "Create new account"
+  },
+  "RegisterPage": {
+    "login_button": "Login to existing account",
+    "name_placeholder": "Username",
+    "name_icon_alt": "User icon",
+    "name_min_length": "Username must be at least 3 characters",
+    "mobile_placeholder": "Mobile number",
+    "mobile_icon_alt": "Phone icon",
+    "mobile_format": "Mobile must start with 05 and be 10 digits",
+    "email_placeholder": "Email",
+    "email_icon_alt": "Email icon",
+    "invalid_email": "Invalid email address",
+    "city_placeholder": "Select your city",
+    "city_icon_alt": "Location icon",
+    "city_required": "City selection is required",
+    "terms_agree": "Yes, I agree to all",
+    "terms_link": "Terms and Conditions",
+    "terms_required": "You must accept the terms and conditions",
+    "otp_sent": "Verification code sent to your mobile",
+    "register_error": "Error occurred while creating account",
+    "creating_account": "Creating account...",
+    "create_account": "Create Account",
+    "register_title": "Create a New Account",
+    "register_subtitle": "Please enter the following information to complete your registration",
+    "existing_account": "Do you already have an account on Nineveh AutoGo?",
+      "enter_password_placeholder": "Enter password",
+  "confirm_password_placeholder": "Confirm password",
+  "image_preview_alt": "Image preview",
+  "click_to_upload": "Click to upload",
+  "or_drag_image_here": "Or drag image here",
+  "accepted_file_formats": "Accepted file formats",
+  "max_file_size": "Max file size",
+  "register_as_client" : "Register as Client",
+  "register_as_company" : "Register as Company"
+  },
+
+  "sells": {
+    "sales_title": "Sales",
+    "sales_subtitle": "List of your ticket sales orders",
+    "no_sales_title": "You have no orders",
+    "no_sales_subtitle": "You don’t have any previous ticket sale orders",
+    "newRequest": "New Request",
+    "accepted": "Accepted",
+    "rejected": "Rejected",
+    "default": "Unknown",
+    "category": "Ticket Category",
+    "listedPrice": "Listed Price",
+    "askingPrice": "Requested Sale Price",
+    "viewDetails": "View Order Details",
+
+  "not_available": "Not Available",
+  "buyer": "Buyer",
+  "tickets": "Tickets",
+    "ongoingOrders": "Ongoing Orders",
+  "finishedOrders": "Finished Orders"
+    
+  },
+  "orderDetails": {
+    "ticketImage": "Ticket Image",
+    "orderDetails": "Order Details",
+    "ticketsCount": "Tickets Count: {count}",
+    "ticketsCategory": "Tickets Category: {category}",
+    "rowNumber": "Row Number: {number}",
+    "seatNumber": "Seat Number: {number}",
+    "adjacentSeats": "Adjacent Seats",
+    "ticketPrice": "Ticket Price",
+    "requestedPrice": "Requested Sale Price",
+    "blockNumber" : "Block Number"
+  },
+  "clientControls": {
+    "editRequest": "Edit Request",
+    "cancelRequest": "Cancel Request",
+    "confirmSendTicket": "Confirm Sending Ticket to Buyer",
+    "cancelSuccess": "The request has been cancelled!",
+    "sendSuccess": "The ticket has been sent to the buyer!"
+  },
+  "acceptOrder": {
+    "title": "Accept Order",
+    "message": "Are you sure you want to accept selling the ticket to this buyer?",
+    "confirm": "Confirm Sale",
+    "processing": "Processing...",
+    "success": "Order accepted successfully",
+    "error": "An error occurred while accepting the order"
+  },
+  "confirmationModal": {
+    "title": "Cancel Order",
+    "message": "Are you sure you want to cancel the sale request for this ticket?",
+    "confirmButton": "Confirm Cancellation",
+    "successMessage": "The ticket has been successfully deleted.",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "priceRequests": {
+    "titleWithBuyers": "Purchase Requests",
+    "titleWithoutBuyers": "Buyer Info",
+    "noRequestsTitle": "No Requests",
+    "noRequestsDesc": "You don’t have any purchase requests for this ticket",
+    "buyerName": "Buyer Name",
+    "email": "Email",
+    "accept": "Accept",
+    "reject": "Reject",
+    "copied": "Copied"
+  },
+  "RejectConfirmModal": {
+    "title": "Reject Order",
+    "description": "Are you sure you want to reject the ticket purchase request?",
+    "confirmReject": "Confirm Rejection",
+    "loading": "Processing..."
+  },
+  "orders": {
+        "blockNumber" : "Block Number",
+    "title": "Orders",
+    "description": "Details of your ticket orders",
+    "noOrders": "You have no orders",
+    "noOrdersDescription": "You have no previous ticket orders",
+    "selectedTickets": "Selected Tickets for Purchase",
+    "adjacentSeats": "Adjacent Seats?",
+    "adjacent": "Adjacent Seats",
+    "notAdjacent": "Non-Adjacent Seats",
+    "ticketEmail": "Ticket Receipt Email",
+    "ticketNumber": "Ticket Number",
+    "gate": "Gate",
+    "category": "Category",
+    "row": "Row",
+    "seat": "Seat",
+    "gateOpensAt": "Gate opens at",
+    "am": "AM",
+    "downloadTicket": "Download Ticket",
+    "paymentDetails": "Payment Invoice Details",
+    "errorFetchingOrder": "Error occurred while fetching order details",
+    "orderDetails": "Order Details",
+    "referenceNumber": "Reference Number",
+    "orderDate": "Order Date",
+    "statusCompleted": "Completed",
+    "statusPending": "Pending Approval",
+    "invoiceDetails": "Invoice Details",
+    "ticketCount": "Number of Tickets",
+    "price": "Price",
+    "discount": "Discount",
+    "total": "Total",
+    "paymentMethod": "Payment Method",
+    "cardHolder": "Card Holder",
+    "cardNumber": "Card Number",
+    "errorLoadingOrder": "An error occurred while fetching order details",
+    "tabs": {
+      "pending": "Pending Approval",
+      "completed": "Confirmed Orders"
+    },
+    "status": {
+      "pending": "Pending",
+      "completed": "Completed"
+    },
+    "loading": "Loading orders...",
+    "reference_number": "Reference Number",
+    "order_date": "Order Date",
+    "view_details": "View Order Details",
+    "no_orders": "No orders in this section",
+    "title": "Orders",
+    "description": "Details of your ticket orders",
+    "no_orders_title": "You have no orders",
+    "no_orders_subtitle": "You don't have any previous ticket orders"
+  },
+  "editRequestModal": {
+    "title": "Edit Order Price",
+    "newPrice": "New Price",
+    "pricePlaceholder": "Enter the new price",
+    "save": "Save",
+    "cancel": "Cancel",
+    "invalidPrice": "Please enter a valid price greater than 0",
+    "priceUpdated": "Price updated to:",
+    "somethingWentWrong": "Something went wrong. Please try again."
+  },
+  "wallet": {
+     "confirmation": {
+    "title": "Your Wallet Has Been Created",
+    "message": "Your wallet has been created successfully. You can check your balance and request a withdrawal.",
+    "button": "Okay"
+  },
+    "validations": {
+      "bank_name_required": "Please choose a bank",
+      "name_required": "Name is required",
+      "number_required": "Account number is required",
+      "iban_required": "IBAN is required"
+    },
+      "withdraw_instruction": "Enter the amount you want to withdraw from the wallet to transfer to your bank account",
+    "amount_placeholder": "Enter amount in SAR",
+    "send_request": "Send Request",
+    "request_sent_successfully": "Request sent successfully",
+    "request_error": "An error occurred while sending the request. Please try again.",
+    "withdraw_instruction": "Enter the amount you want to withdraw from the wallet to transfer to your bank account",
+    "amount_placeholder": "Enter amount in SAR",
+    "send_request": "Send Request",
+    "close": "Close",
+    "wallet_balance": "Your Wallet Balance",
+    "withdraw_request": "Withdraw Request",
+    "wallet_history": "Transaction History",
+    "add_button": "Add Bank Account",
+    "add_account": "Add Bank Account",
+    "bankdescription": "Enter your bank account details to link your wallet",
+    "bank_name": "Choose a bank",
+    "name": "Enter account holder's name",
+    "number": "Enter account number",
+    "iban": "Enter IBAN",
+    "confirm": "Confirm Data",
+    "success": "Bank account linked successfully",
+    "error": "An error occurred while linking the bank account",
+    "messages": {
+      "deposit_content": "An amount has been added to your wallet"
+    },
+    "title": "Wallet",
+    "description": "Track your wallet balance after selling tickets",
+    "noBankTitle": "You haven't linked your wallet",
+    "noBankDescription": "Link your wallet with your bank account to request withdrawals"
+  },
+  "uerDropdown": {
+        "my-tickets" : "My Tickets",
+    "edit": "Edit My Info",
+    "notifications": "Notifications",
+    "orders": "Orders",
+    "sales": "Sales",
+    "wallet": "Wallet",
+    "logout": "Logout",
+    "delete_account": "Delete Account",
+    "notifications_count": "7",
+    "aa" : "My Tickets"
+  },
+  "UserDropdown" : {
+    "my-tickets" : "My Tickets",
+    "aa" : "My Tickets"
+  },
+  
+  "Logout": {
+    "title": "Logout",
+    "description": "Are you sure you want to log out of your account?",
+    "confirm": "Confirm Logout",
+    "successMessage": "You have logged out successfully",
+    "failMessage": "Logout failed"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Your account notification center",
+    "emptyTitle": "You have no notifications",
+    "emptyDescription": "There are currently no notifications for your account"
+  },
+  "DeleteAccountOTP": {
+    "verificationCode": "Verification Code",
+    "verificationMessage": "Enter the verification code sent to your mobile number",
+    "verifyButton": "Verify",
+    "verifying": "Verifying...",
+    "resendCode": "Resend Code",
+    "requestNewCode": "You can request a new code after",
+    "successMessage": "Verified successfully",
+    "errorMessage": "An error occurred during verification",
+    "verificationFailed": "Verification failed, please try again",
+    "newCodeSent": "A new code has been sent to your phone",
+    "invalidCode": "Please enter the 6-digit verification code"
+  },
+  "DeleteAccount": {
+    "title": "Confirm Account Deletion",
+    "description": "Are you sure you want to permanently delete your account?",
+    "deleteButton": "Delete Account",
+    "cancelButton": "No, Thanks",
+    "removeAlt": "remove account",
+    "fetchError": "Failed to fetch user data",
+    "codeSent": "Account deletion code sent successfully",
+    "actionFailed": "Operation cannot be completed at the moment",
+    "deleteError": "Cannot delete account due to pending requests",
+    "unexpectedError": "An unexpected error occurred"
+  },
+  "UserDropdown": {
+    "editProfile": "Edit My Info",
+    "notifications": "Notifications",
+    "orders": "Orders",
+    "sales": "Sales",
+    "wallet": "Wallet",
+    "logout": "Log Out",
+    "deleteAccount": "Delete Account"
+  },
+  "events": {
+    "allEvents": "Here are all the Services related to this section"
+  },
+  "CitySelect": {
+    "loading": "Loading cities...",
+    "placeholder": "Select the event city"
+  },
+  "SendTicketModal": {
+    "title": "Confirm sending the ticket to the buyer",
+    "description": "Attach an image of the ticket to complete the sale confirmation",
+    "imageTitle": "Ticket Image",
+    "imageDescription": "Upload a webhook receipt image, chat image, email confirmation, or any other",
+    "confirmButton": "Confirm Send",
+  "loadingButton": "Uploading..."
+
+  },
+  "order": {
+    "orderDetailsTitle": "Order Details",
+    "publishDate": "Publish Date",
+    "notAvailable": "Not Available",
+    "ticketsCategory" : "Tickets Category",
+     "rowNumber": "Row Number",
+  "seatNumber": "Seat Number"
+  },
+   "sell": {
+    "title": "Sell Your Ticket",
+    "description": "If you have a ticket you no longer want, you can list it for sale"
+  },
+  "otpCode": {
+  "title": "Verification Code",
+  "desc": "Enter the verification code that was sent to your mobile number"
+},
+"my-tickets" : {
+      "noTickets" : "No tickets are currently available",
+  "square" : "Square",
+  "sar" : "Sar",
+  "myTickets": "My Tickets",
+  "ticketCategory": "Category",
+  "row": "Row",
+  "seat": "Seat",
+  "price": "Price",
+  "status": "Status",
+  "paid": "Paid",
+  "pending": "Pending",
+  "note": "Note: Seat number does not appear in the ticket details for sale, it is only for identifying adjacent tickets."
+},
+  "CancelTicketModal": {
+    "title": "Cancel Ticket",
+    "confirmation": "Are you sure you want to cancel ticket number {ticketId}?",
+    "close": "Close",
+    "confirm": "Confirm",
+    "loading": "Cancelling...",
+    "success": "The ticket has been successfully cancelled ✅",
+    "error": "An error occurred while cancelling the ticket ❌"
+  },
+  "EditTicketModal": {
+    "title": "Edit Ticket",
+    "subtitle": "Edit ticket details for ticket number {ticketId}",
+    "seatNumber": "Seat Number",
+    "rowNumber": "Row Number",
+    "blockNumber": "Block Number",
+    "price": "Ticket Price",
+    "stand": "Choose Category",
+    "standPlaceholder": "Select a category",
+    "ticketImage": "Ticket Image",
+    "chooseImage": "Click here to choose an image",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Saving...",
+    "success": "The ticket has been updated successfully",
+    "error": "An error occurred while updating the ticket"
+  },
+    "PaymentStatusModal": {
+    "successTitle": "Payment Successful",
+    "successDescription": "Your payment has been processed successfully.",
+    "title": "Payment Failed",
+    "description": "There was an issue with your payment. Please try again.",
+    "ok": "OK"
+  },
+  "company_name_placeholder": "Company Name",
+  "company_name_alt": "Company Name",
+  "email_placeholder": "Email Address",
+  "email_alt": "Email",
+  "mobile_placeholder": "Mobile Number",
+  "mobile_alt": "Mobile",
+  "city_placeholder": "Select City",
+  "city_alt": "City",
+  "license_number_placeholder": "License Number",
+  "license_number_alt": "License",
+  "description_placeholder": "Company Description",
+  "description_alt": "Description",
+  "password_placeholder": "Enter Password",
+  "confirm_password_placeholder": "Confirm Password",
+  "click_to_upload": "Click to upload",
+  "drag_or_click_here": "or drag the image here",
+  "image_size_format": "PNG, JPG, JPEG (Max 2MB)",
+  "create_account_button": "Create Company Account"
+}

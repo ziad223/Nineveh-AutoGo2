@@ -1,0 +1,388 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html body[data-scroll-locked] {
+  overflow: visible !important;
+  margin-right: 0 !important;
+}
+body{
+     background-color: #eee !important;
+    font-family: 'Loew Next Arabic', sans-serif !important;
+
+}
+@layer base {
+  html {
+    --color-primary: #bca396;
+    --color-secondary: #f7efdf;
+    --body-color: #faf9f6;
+    --color-main-text: rgba(11, 22, 23, 1);
+    --parg-color: #636363;
+    --color-initial: #ffffff;
+    --tabs-background: rgba(233, 234, 245, 0.62);
+    --color-third: rgba(233, 234, 245, 1);
+    --color-font-text: rgba(155, 157, 161, 1);
+    --color-main: #111345;
+    scroll-behavior: smooth;
+
+    /* @import "./themes/theme1/index.css";
+    @import "./themes/theme2/index.css";
+    @import "./themes/theme3/index.css"; */
+  }
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+   font-family: 'Loew Next Arabic', sans-serif;
+
+  }
+  body {
+    @apply bg-background text-foreground;
+
+     font-family: 'Loew Next Arabic', sans-serif;
+
+  }
+  .unique-h {
+    @apply after:block after:w-[50px] after:h-[20px] after:border-b-[10px] ltr:after:border-l-[10px] rtl:after:border-r-[10px] after:-translate-y-4 ltr:after:-translate-x-4 rtl:after:translate-x-4 after:absolute after:z-[-10] relative after:border-[rgba(180,147,69,0.35)];
+  }
+}
+.filter-shadow {
+  box-shadow: 0px 8px 32px 0px #4541351f !important;
+}
+.custom-shadow{
+  box-shadow: 0px 0px 50px 14px #00000012;
+}
+/* لإخفاء شريط التمرير على جميع المتصفحات */
+.scroll-container {
+  overflow: auto;
+  scrollbar-width: none; /* للمتصفحات مثل Firefox */
+  -ms-overflow-style: none; /* للمتصفحات مثل Internet Explorer و Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* للمتصفحات مثل Chrome و Safari */
+}
+
+.bg-ii {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='5' stroke-dasharray='10' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+
+.swiper-pagination-bullet {
+  width: 18px !important;
+  height: 9px !important;
+  border-radius: 2px !important;
+  background-color: #ccc !important;
+  transition: transform 0.3s, width 0.3s, height 0.3s;
+  margin: 0 15px !important;
+}
+
+
+/* عندما يكون الـ bullet نشط */
+.swiper-pagination-bullet-active {
+  width: 46px !important;
+  transform: scale(1.5); 
+  background-color: #FACC15 !important; 
+}
+
+@media screen and (max-width : 550px){
+  .swiper-pagination-bullet {
+  width: 18px !important;
+  height: 9px !important;
+}
+
+
+/* عندما يكون الـ bullet نشط */
+.swiper-pagination-bullet-active {
+  width: 26px !important;
+  transform: cale(1.5); 
+}
+}
+
+.sectionSwiper .swiper-pagination-bullet-active{
+    background-color: #FACC15 !important;
+}
+.sectionSwiper .swiper-pagination-bullet-active {
+  width: 26px !important;
+  transform: scale(1.5);
+}
+
+@media (max-width: 640px) {
+  .sectionSwiper .swiper-pagination-bullet-active {
+    width: 18px !important;
+    transform: scale(1.2);
+  }
+  .sectionSwiper .swiper-pagination-bullet{
+    margin: 0px 5px !important;
+  }
+}
+
+
+.swiper-pagination {
+  /*bottom: 10px !important;
+    left: 35% !important;
+    */
+
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+}
+
+/* ................. */
+
+.productsSlider .swiper-pagination-bullet,
+.partners .swiper-pagination-bullet {
+  background-color: #580c3188 !important;
+}
+
+.productsSlider .swiper-pagination-bullet-active,
+.partners .swiper-pagination-bullet-active {
+  background-color: #580c31 !important;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+
+.embla {
+  max-width: 48rem;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 0.5rem;
+  --slide-size: 20%;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-inline-start: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-inline-start: var(--slide-spacing);
+}
+.embla__slide__number {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  border-radius: 1.8rem;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+  user-select: none;
+}
+.embla__controls {
+  display: flex;
+  /* grid-template-columns: auto 1fr; */
+  justify-content: center;
+  /* gap: 1rem; */
+  /* margin-top: 0.5rem; */
+}
+.embla__dots {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-inline-start: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dot {
+  /* -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5); */
+  -webkit-tap-highlight-color: #bca396;
+  -webkit-appearance: none;
+  appearance: none;
+  /* background-color: transparent; */
+  /* background-color: transparent; */
+  border-color: #bca396;
+  border-width: 3px;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.embla__dot:after {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: "";
+  border-color: #bca396;
+  border-width: 3px;
+}
+.embla__dot--selected:after {
+  box-shadow: inset 0 0 0 0.2rem #bca396;
+  background-color: #bca396;
+}
+
+/* For screens smaller than 1024px (Tablets & Mobile) */
+@media (max-width: 1024px) {
+  .embla {
+    --slide-height: 16rem;
+    --slide-size: 25%;
+  }
+}
+
+/* For screens smaller than 768px (Mobile) */
+@media (max-width: 768px) {
+  .embla {
+    --slide-height: 12rem;
+    --slide-spacing: 0.25rem;
+    --slide-size: 33%;
+  }
+}
+
+
+
+/* Black */
+/* Black */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/DINNextLTArabic-Regular-3.ttf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* ExtraBold */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Thin */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Thin.otf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Heavy */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Heavy.otf') format('truetype');
+  font-weight: 950;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-ExtraBold.otf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+
+ .group:hover img {
+      filter: grayscale(0) sepia(1) hue-rotate(-50deg) saturate(6) brightness(1);
+    }
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+}
