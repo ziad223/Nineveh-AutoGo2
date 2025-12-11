@@ -289,7 +289,14 @@
     "otp_sent": "Verification code sent to your mobile",
     "login_error": "Error during login",
     "logging_in": "Logging in...",
-    "login": "Login"
+    "login": "Login",
+    "password_placeholder": "Enter password",
+    "select_client_type": "Select client type",
+    "customer": "Customer",
+    "company": "Company",
+    "login_success": "Login successful",
+    "password_invalid": "Invalid password",
+    "client_type_required": "Client type is required"
   },
   "LoginPage": {
     "login_image_alt": "Login illustration",

@@ -279,7 +279,14 @@
     "otp_sent": "تم إرسال كود التحقق إلى هاتفك المحمول",
     "login_error": "حدث خطأ أثناء تسجيل الدخول",
     "logging_in": "جاري تسجيل الدخول...",
-    "login": "تسجيل الدخول"
+    "login": "تسجيل الدخول",
+    "password_placeholder": "أدخل كلمة المرور",
+    "select_client_type": "اختر نوع المستخدم",
+    "customer": "عميل",
+    "company": "شركة",
+    "login_success": "تم تسجيل الدخول بنجاح",
+    "password_invalid": "كلمة المرور غير صالحة",
+    "client_type_required": "يجب اختيار نوع المستخدم"
   },
   "LoginPage": {
     "login_image_alt": "رسم توضيحي لتسجيل الدخول",

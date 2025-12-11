@@ -22,12 +22,15 @@ interface NavbarProps {
 }
 
 const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
+  console.log(token);
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const [showWalletModal, setShowWalletModal] = useState(false);
   const [walletModalOpen, setWalletModalOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [name, setName] = useState<string | undefined>("");
+  const [profileImage, setProfileImage] = useState<string | undefined>("");
   const locale = useLocale();
   const t = useTranslations("navbar");
 
@@ -38,8 +41,8 @@ const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
       if (!token) return;
       try {
         const response = await apiServiceCall({
-          method: "get",
-          url: "user/profile",
+          method: "GET",
+          url: "auth/me",
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -47,7 +50,8 @@ const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
         });
 
         if (response?.data?.user?.name) {
-          setName(response.data.user.name);
+          setName(response?.data?.user?.name);
+          setProfileImage(response?.data?.user?.profile_image_url);
         }
       } catch (error) {
         console.error("Failed to fetch user profile", error);
@@ -110,8 +114,8 @@ const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
               onClick={() => setDropdownOpen((prev) => !prev)}
             >
               <Image
-                src={userr}
-                width={19.5}
+                src={profileImage || undefined}
+                width={25}
                 height={25.84}
                 alt="user"
                 className="inline-block mr-2"
@@ -182,7 +186,7 @@ const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
 
               <div className="relative">
                 <button onClick={handleMobileDropdownToggle}>
-                  <Image src={userr} alt="USERR" width={20} height={20} />
+                  <Image src={profileImage} alt="profileImage" width={20} height={20} />
                 </button>
 
                 {mobileDropdownOpen && (

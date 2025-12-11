@@ -1,144 +1,207 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import React from 'react';
+import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useMutation } from '@tanstack/react-query';
 import { toast, ToastContainer } from 'react-toastify';
-import Image from 'next/image';
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import loginPhone from '@/public/images/login-phone.png';
-import InputComponent from '@/components/shared/reusableComponents/InputComponent';
-import OtpCode from './OtpCode';
+import { MdLockOutline } from "react-icons/md";
 import apiServiceCall from '@/lib/apiServiceCall';
 import { z } from 'zod';
-import { v4 as uuidv4 } from 'uuid';
-import { useTranslations , useLocale } from 'next-intl';
-import { MdLockOutline } from 'react-icons/md';
+import { useTranslations, useLocale } from 'next-intl';
+import CustomSelect from '@/components/shared/reusableComponents/CustomSelect';
+import InputComponent from '@/components/shared/reusableComponents/InputComponent';
 
+// ------------------------- Schema ---------------------------
 const loginSchema = z.object({
-  mobile: z.string().regex(/^05\d{8}$/, 'mobile_invalid'),
+  phone: z.string().regex(/^05\d{8}$/, "mobile_invalid"),
+  password: z.string().min(3, "password_invalid"),
+  client_type: z.enum(["customer", "company"], {
+    message: "client_type_required",
+  }),
 });
 
 type LoginFormData = z.infer<typeof loginSchema>;
 
-const LoginForm: React.FC = () => {
-  const t = useTranslations('Login');
-  const locale = useLocale();
-  const [mobile, setMobile] = useState<string>('');
-  const [isModalOpen, setIsModalOpen] = useState(false);
+// ------------------------- نوع الاستجابة ---------------------------
+interface LoginResponse {
+  status_code: number;
+  message: string;
+  data: {
+    user: {
+      id: number;
+      name: string;
+      company_name: string | null;
+      company_bio: string | null;
+      commercial_register: string | null;
+      email: string;
+      client_type: string;
+      phone: string;
+      city: string;
+      email_verified_at: string | null;
+      status: number;
+      terms_accepted_at: string;
+      deleted_at: string | null;
+      created_at: string;
+      updated_at: string;
+      profile_image_url: string;
+    };
+    token: string;
+    token_type: string;
+  };
+}
 
-  const { 
-    register, 
-    handleSubmit, 
-    formState: { errors },
+// ------------------------- Component ---------------------------
+const LoginForm: React.FC = () => {
+  const t = useTranslations("Login");
+  const locale = useLocale();
+  const router = useRouter();
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors }
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      mobile: '',
+      phone: "",
+      password: "",
+      client_type: "",
     },
   });
 
+  // ------------------------- Mutation ---------------------------
   const loginMutation = useMutation({
-    mutationFn: (data: LoginFormData) => {
-      let uuid = localStorage.getItem('uuid');
-      let deviceToken = localStorage.getItem('device_token');
-      
-      if (!uuid) {
-        uuid = uuidv4();
-        localStorage.setItem('uuid', uuid);
-      }
-      
-      if (!deviceToken) {
-        deviceToken = uuidv4();
-        localStorage.setItem('device_token', deviceToken);
-      }
-
-      return apiServiceCall({
-        url: 'login',
-        method: 'POST',
+    mutationFn: (data: LoginFormData) =>
+      apiServiceCall({
+        url: "auth/login",
+        method: "POST",
         body: {
-          mobile: data.mobile,
-          uuid,
-          device_token: deviceToken,
-          device_type: 'web'
+          phone: data.phone,
+          password: data.password,
+          client_type: data.client_type,
         },
-        headers : {
-          "Accept-Language" : locale
-        }
-      });
-    },
-    onSuccess: (response) => {
-      toast.success(t(response.message) || t('otp_sent'));
-      setMobile(response.data?.mobile || mobile);
+        headers: {
+          "Accept-Language": locale,
+        },
+      }),
+
+    onSuccess: async (res: unknown) => {
+      // Type assertion
+      const response = res as LoginResponse;
       
-      const code = response.data?.code;
-      if (code) {
-        localStorage.setItem('code', JSON.stringify(code));
-      }
-    },
-    onError: (error: any) => {
-      if (error?.status === 302) {
-        toast.success(t(error.data?.message) || t('otp_sent'));
-        setIsModalOpen(true);
-        setMobile(error.data?.data?.mobile || mobile);
+      if (response?.status_code === 200) {
+        toast.success(t("login_success"));
         
-        const code = error.data?.data?.code;
-        if (code) {
-          localStorage.setItem('code', JSON.stringify(code));
+        // إرسال التوكن وبيانات المستخدم إلى API route
+        if (response.data?.token) {
+          try {
+            const tokenResponse = await fetch('/api/auth/set-token', {
+              method: 'POST',
+              headers: { 
+                'Content-Type': 'application/json',
+                'Accept-Language': locale 
+              },
+              body: JSON.stringify({
+                token: response.data.token,
+                userId: response.data.user?.id,
+                userDataInfo: response.data.user,
+                mobile: response.data.user?.phone,
+                userType: response.data.user?.client_type || 'customer'
+              }),
+            });
+            
+            if (!tokenResponse.ok) {
+              throw new Error('Failed to store token');
+            }
+
+            // الانتقال إلى الصفحة الرئيسية
+            setTimeout(() => {
+              window.location.href = `/${locale}`;
+            }, 1200);
+
+          } catch (error) {
+            console.error('Error storing token:', error);
+            toast.error(t("session_save_error"));
+          }
+        } else {
+          // إذا لم يكن هناك token
+          toast.error(t("no_token_received"));
         }
       } else {
-        toast.error(t(error.data?.message) || t('login_error'));
+        toast.error(response?.message || t("login_error"));
       }
-    }
+    },
+
+    onError: (err: any) => {
+      toast.error(err.data?.message || t("login_error"));
+    },
   });
 
+  // ------------------------- Submit ---------------------------
   const onSubmit = (data: LoginFormData) => {
     loginMutation.mutate(data);
   };
 
   return (
     <>
-      <form className='flex flex-col w-full' onSubmit={handleSubmit(onSubmit)}>
-        <ToastContainer />
-        <div className="">
-          <InputComponent
-            register={register}
-            name="mobile"
-            type="text"
-            placeholder={t('mobile_placeholder')}
-            icon={<Image src={loginPhone} alt='loginPhone' width={24} height={24} />}
-          />
-          {errors.mobile && (
-            <p className="mt-1 text-sm text-red-600">
-              {t(errors.mobile.message || 'mobile_invalid')}
-            </p>
-          )}
-        </div>
-         <div className="mb-4">
-          <InputComponent
-            register={register}
-            name="mobile"
-            type="text"
-            placeholder='أدخل كلمة المرور'
-            icon={<MdLockOutline  className='text-3xl'/>}
-          />
-          {errors.mobile && (
-            <p className="mt-1 text-sm text-red-600">
-              {t(errors.mobile.message || 'mobile_invalid')}
-            </p>
-          )}
-        </div>
+      <ToastContainer />
 
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col w-full "
+      >
+        {/* Phone */}
+        <InputComponent
+          register={register}
+          name="phone"
+          type="text"
+          placeholder={t("mobile_placeholder")}
+          icon={<Image src={loginPhone} alt="loginPhone" width={24} height={24} />}
+        />
+        {errors.phone && (
+          <p className="text-sm text-red-600">{t(errors.phone.message)}</p>
+        )}
+
+        {/* Password */}
+        <InputComponent
+          register={register}
+          name="password"
+          type="password"
+          placeholder={t("password_placeholder")}
+          icon={<MdLockOutline className="text-2xl" />}
+        />
+        {errors.password && (
+          <p className="text-sm text-red-600">{t(errors.password.message)}</p>
+        )}
+
+        {/* Client Type */}
+        <CustomSelect
+          name="client_type"
+          control={control}
+          placeholder={t("select_client_type")}
+          options={[
+            { value: "customer", label: t("customer") },
+            { value: "company", label: t("company") },
+          ]}
+        />
+        {errors.client_type && (
+          <p className="text-sm text-red-600">{t(errors.client_type.message)}</p>
+        )}
+
+        {/* Button */}
         <button
           type="submit"
           disabled={loginMutation.isPending}
-          className='bg-primary  w-full text-white py-3 rounded-lg font-bold transition duration-300 hover:bg-[#d02c00] disabled:opacity-70 disabled:cursor-not-allowed'
+          className="bg-primary w-full mt-5 text-white py-3 rounded-lg font-bold hover:bg-primary/80 disabled:opacity-70"
         >
-          {loginMutation.isPending ? t('logging_in') : t('login')}
+          {loginMutation.isPending ? t("logging_in") : t("login")}
         </button>
       </form>
-
-   
     </>
   );
 };
