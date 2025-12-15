@@ -13,13 +13,10 @@ import {
   FaLinkedin,
 } from "react-icons/fa6";
 import Container from "../shared/container";
-import pay1 from "@/public/images/pay-1.png";
-import pay2 from "@/public/images/pay-2.png";
-import pay3 from "@/public/images/pay-3.png";
-import pay4 from "@/public/images/pay-4.png";
-import pay5 from "@/public/images/pay-5.png";
+
 import apiServiceCall from "@/lib/apiServiceCall";
 import { useTranslations } from "next-intl";
+
 interface SettingItem {
   key: string;
   value: string;
@@ -40,6 +37,7 @@ interface Props {
 const Footer: React.FC<Props> = ({ settings, locale, token }) => {
   const [staticPages, setStaticPages] = useState<StaticPage[]>([]);
   const t = useTranslations("footer");
+
   useEffect(() => {
     const fetchPages = async () => {
       try {
@@ -51,21 +49,18 @@ const Footer: React.FC<Props> = ({ settings, locale, token }) => {
           },
         });
 
-        if (res.status) {
+        if (res?.status) {
           setStaticPages(res.data);
         }
       } catch (error) {
-        // console.error("Failed to fetch static pages:", error);
+        // silent
       }
     };
 
     fetchPages();
-  }, []);
+  }, [locale]);
 
-  const getValue = (key: string) =>
-    settings.find((s) => s.key === key)?.value || "";
-
-  const socialKeys: { [key: string]: JSX.Element } = {
+  const socialIcons: Record<string, JSX.Element> = {
     facebook: <FaFacebookF />,
     instagram: <FaInstagram />,
     snapchat: <FaSnapchat />,
@@ -76,33 +71,39 @@ const Footer: React.FC<Props> = ({ settings, locale, token }) => {
   };
 
   return (
-    <div className="bg-[#f9f9f9] py-10">
+    <footer className="bg-[#f9f9f9] pt-12 pb-8 mt-10">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
-          <div>
-            <Image
-              src='/images/hero-2.webp'
-              alt="footer logo"
-              className="rounded-lg"
-              width={209}
-              height={87}
-            />
-           <p className="md:text-sm text-xs font-medium lg:mt-4 mt-1">
-  منصة متخصصة في خدمات السيارات المتنقلة، نوفر غسيل وتلميع وتعقيم احترافي أينما كنت 
-  لنجعل سيارتك نظيفة ولامعة كأنها جديدة.
-</p>
+        {/* ===== Main Grid ===== */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
-            <h4 className="lg:mt-4 mt-1 md:text-sm text-xs font-medium text-[#8B8B8B]">
+          {/* ===== Logo & Description ===== */}
+          <div className="lg:col-span-4 space-y-4">
+            <Image
+              src="/images/hero-2.webp"
+              alt="Footer Logo"
+              width={210}
+              height={90}
+              className="rounded-lg"
+            />
+
+            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+              منصة متخصصة في خدمات السيارات المتنقلة، نوفر غسيل وتلميع وتعقيم
+              احترافي أينما كنت لنجعل سيارتك نظيفة ولامعة كأنها جديدة.
+            </p>
+
+            <p className="text-xs md:text-sm text-gray-400">
               {t("copyright")}
-            </h4>
+            </p>
           </div>
 
-          <div className="lg:col-span-2">
-            <h2 className="text-primary font-bold lg:text-lg text-sm mb-3 mt-5 lg:mt-0">
+          {/* ===== Quick Links ===== */}
+          <div className="lg:col-span-5">
+            <h3 className="text-primary font-bold text-sm md:text-lg mb-4">
               {t("quickLinks")}
-            </h2>
-            <div className="flex flex-wrap md:flex-nowrap md:flex-row">
-              <ul className="flex flex-col gap-3 flex-1">
+            </h3>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <ul className="space-y-3">
                 {[
                   { key: "aboutUs", href: `/${locale}` },
                   { key: "categories", href: `/${locale}` },
@@ -111,10 +112,10 @@ const Footer: React.FC<Props> = ({ settings, locale, token }) => {
                   { key: "support", href: `/${locale}` },
                 ].map(({ key, href }) => (
                   <li key={key} className="flex items-center gap-3">
-                    <div className="w-[14px] h-[14px] bg-[#D9D9D9] rounded-full"></div>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full" />
                     <Link
                       href={href}
-                      className="hover:text-primary text-xs md:text-lg transition"
+                      className="text-xs md:text-sm hover:text-primary transition"
                     >
                       {t(key)}
                     </Link>
@@ -122,13 +123,13 @@ const Footer: React.FC<Props> = ({ settings, locale, token }) => {
                 ))}
               </ul>
 
-              <ul className="flex flex-col gap-3 flex-1">
+              <ul className="space-y-3">
                 {staticPages.map(({ id, title }) => (
                   <li key={id} className="flex items-center gap-3">
-                    <div className="w-[14px] h-[14px] bg-[#D9D9D9] rounded-full"></div>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full" />
                     <Link
-                    href={`/${locale}`}
-                      className="hover:text-primary transition text-xs md:text-lg"
+                      href={`/${locale}`}
+                      className="text-xs md:text-sm hover:text-primary transition"
                     >
                       {title}
                     </Link>
@@ -136,15 +137,12 @@ const Footer: React.FC<Props> = ({ settings, locale, token }) => {
                 ))}
 
                 {!token &&
-                  [
-                    { key: "login", href: `/${locale}` },
-                    { key: "register", href: `/${locale}` },
-                  ].map(({ key, href }) => (
+                  ["login", "register"].map((key) => (
                     <li key={key} className="flex items-center gap-3">
-                      <div className="w-[14px] h-[14px] bg-[#D9D9D9] rounded-full"></div>
+                      <span className="w-2 h-2 bg-gray-400 rounded-full" />
                       <Link
-                        href={href}
-                        className="hover:text-primary transition text-xs md:text-lg"
+                        href={`/${locale}`}
+                        className="text-xs md:text-sm hover:text-primary transition"
                       >
                         {t(key)}
                       </Link>
@@ -154,43 +152,43 @@ const Footer: React.FC<Props> = ({ settings, locale, token }) => {
             </div>
           </div>
 
-          <div>
-            <h2 className="text-primary font-bold lg:text-lg text-sm mb-3 mt-5 lg:mt-0">
-              {t("followUs")}
-            </h2>
-            <div className="flex items-center gap-3 flex-wrap">
-              {settings
-                .filter((s) => s.type === "contacts" && socialKeys[s.key])
-                .map((s) => {
-                  const finalLink =
-                    s.key === "whatsapp" ? `https://wa.me/${s.value}` : s.value;
-                  return (
-                    <a
-                      key={s.key}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-[38px] h-[38px] cursor-pointer rounded-full border border-gray-300 flex items-center justify-center hover:bg-black hover:text-white duration-300"
-                    >
-                      {socialKeys[s.key]}
-                    </a>
-                  );
-                })}
+          {/* ===== Social & Payments ===== */}
+          <div className="lg:col-span-3 space-y-6">
+            <div>
+              <h3 className="text-primary font-bold text-sm md:text-lg mb-3">
+                {t("followUs")}
+              </h3>
+
+              <div className="flex gap-3 flex-wrap">
+                {settings
+                  .filter(
+                    (s) => s.type === "contacts" && socialIcons[s.key]
+                  )
+                  .map((s) => {
+                    const link =
+                      s.key === "whatsapp"
+                        ? `https://wa.me/${s.value}`
+                        : s.value;
+
+                    return (
+                      <a
+                        key={s.key}
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-primary hover:text-white transition"
+                      >
+                        {socialIcons[s.key]}
+                      </a>
+                    );
+                  })}
+              </div>
             </div>
 
-            <h2 className="text-primary font-bold lg:text-lg text-sm mb-3 mt-5">
-              {t("paymentMethods")}
-            </h2>
-            <div className="flex items-center gap-3">
-              <Image src={pay1} alt="pay1" />
-              <Image src={pay2} alt="pay2" />
-              <Image src={pay3} alt="pay3" />
-              <Image src={pay4} alt="pay4" />
-              <Image src={pay5} alt="pay5" />
-            </div>
           </div>
         </div>
       </Container>
-    </div>
+    </footer>
   );
 };
 

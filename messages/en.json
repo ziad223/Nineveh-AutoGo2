@@ -492,9 +492,6 @@
     "send_request": "Send Request",
     "request_sent_successfully": "Request sent successfully",
     "request_error": "An error occurred while sending the request. Please try again.",
-    "withdraw_instruction": "Enter the amount you want to withdraw from the wallet to transfer to your bank account",
-    "amount_placeholder": "Enter amount in SAR",
-    "send_request": "Send Request",
     "close": "Close",
     "wallet_balance": "Your Wallet Balance",
     "withdraw_request": "Withdraw Request",
@@ -633,8 +630,14 @@
     "close": "Close",
     "confirm": "Confirm",
     "loading": "Cancelling...",
-    "success": "The ticket has been successfully cancelled ✅",
-    "error": "An error occurred while cancelling the ticket ❌"
+    "success": "The ticket has been successfully cancelled ",
+    "error": "An error occurred while cancelling the ticket "
+  },
+  "serviceDetails" : {
+ "aboutService": "About the Service",
+    "features": "Service Features",
+      "contactWhatsapp": "Contact us on WhatsApp!",
+  "contactPhone": "Call us directly to book!"
   },
   "EditTicketModal": {
     "title": "Edit Ticket",
@@ -677,5 +680,27 @@
   "click_to_upload": "Click to upload",
   "drag_or_click_here": "or drag the image here",
   "image_size_format": "PNG, JPG, JPEG (Max 2MB)",
-  "create_account_button": "Create Company Account"
+  "create_account_button": "Create Company Account",
+   "sellService": {
+    "title": "Sell Your Service",
+    "category": "Select Category",
+    "categoryId": "Category ID",
+    "titleAr": "Title (Arabic)",
+    "titleEn": "Title (English)",
+    "contentAr": "Content (Arabic)",
+    "contentEn": "Content (English)",
+    "phone": "Phone Number",
+    "mobile": "Mobile Number",
+    "price": "Price",
+    "featuresTitle": "Features",
+    "feature": "Feature",
+    "addFeature": "+ Add Feature",
+    "uploadImage": "Upload Images",
+    "imageFormats": "JPG, PNG up to 5MB",
+    "submit": "Publish Service",
+    "success": "Service published successfully!",
+    "descriptionRequired": "Description is required",
+    "descriptionShort": "Description is too short (min 10 characters)",
+    "contentRequired": "Content is required"
+  }
 }

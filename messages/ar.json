@@ -82,6 +82,12 @@
       "message": "الرسالة يجب أن تكون على الأقل 10 أحرف"
     }
   },
+  "serviceDetails" : {
+    "aboutService": "عن الخدمة",
+        "features": "مميزات الخدمة",
+        "contactWhatsapp": "تواصل معنا على واتساب!",
+  "contactPhone": "اتصل بنا مباشرة للحجز!"
+  },
   "footer": {
     "description": "منصة لتبادل وإعادة بيع التذاكر تتيح للمستخدمين تجربة آمنة وسهلة لشراء وبيع التذاكر لمجموعة متنوعة من الخدمات الترفيهية والرياضية والحفلات.",
     "copyright": "© جميع الحقوق محفوظة -  خبب نينوي 2025",
@@ -666,5 +672,29 @@
   "click_to_upload": "اضغط للرفع",
   "drag_or_click_here": "أو اسحب الصورة هنا",
   "image_size_format": "PNG, JPG, JPEG (بحد أقصى 2MB)",
-  "create_account_button": "إنشاء حساب كشركة"
+  "create_account_button": "إنشاء حساب كشركة",
+  "sellService": {
+    "title": "بيع خدمتك",
+    "category": "اختر القسم",
+    "categoryId": "معرف القسم",
+    "titleAr": "العنوان (عربي)",
+    "titleEn": "العنوان (إنجليزي)",
+    "contentAr": "المحتوى (عربي)",
+    "contentEn": "المحتوى (إنجليزي)",
+    "phone": "رقم الواتس",
+    "mobile": "رقم الجوال",
+    "price": "السعر",
+    "featuresTitle": "المميزات",
+    "feature": "ميزة",
+    "addFeature": "+ إضافة ميزة",
+    "uploadImage": "رفع الصور",
+    "imageFormats": "JPG, PNG حتى 5 ميجابايت",
+    "submit": "نشر الخدمة",
+    "success": "تم نشر الخدمة بنجاح!",
+    "descriptionRequired": "الوصف مطلوب",
+    "descriptionShort": "الوصف قصير جداً (10 أحرف على الأقل)",
+    "contentRequired": "المحتوى مطلوب",
+    "contentArPlaceholder" : "وصف الخدمة بالعربي",
+    "contentEnPlaceholder" : "وصف الخدمة بالأنجليزي"
+  }
 }
