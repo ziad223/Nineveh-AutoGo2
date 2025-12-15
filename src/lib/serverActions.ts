@@ -15,6 +15,18 @@ export const getSingleCourse = async (lang: string, id: string) => {
     errorsHandling(error, lang);
   }
 };
+export const getSingleCategory = async (lang: string, id: string) => {
+  try {
+    const data = await apiServiceCall({
+      url: `categories/${id}`,
+      headers: { "Accept-Language": lang },
+    });
+    return data;
+  } catch (error) {
+    errorsHandling(error, lang);
+  }
+};
+
 
 export const getProfile = async (lang: string) => {
   try {
