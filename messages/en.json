@@ -702,5 +702,7 @@
     "descriptionRequired": "Description is required",
     "descriptionShort": "Description is too short (min 10 characters)",
     "contentRequired": "Content is required"
-  }
+  },
+    "commercial_register_placeholder" : " Commercial Register",
+  "company_bio_placeholder" : "Company Bio"
 }

@@ -696,5 +696,7 @@
     "contentRequired": "المحتوى مطلوب",
     "contentArPlaceholder" : "وصف الخدمة بالعربي",
     "contentEnPlaceholder" : "وصف الخدمة بالأنجليزي"
-  }
+  },
+  "commercial_register_placeholder" : "السجل التجاري",
+  "company_bio_placeholder" : "نبذة عن الشركة"
 }

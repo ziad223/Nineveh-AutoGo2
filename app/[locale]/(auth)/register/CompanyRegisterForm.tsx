@@ -122,7 +122,7 @@ const CompanyRegisterForm = () => {
         body: formData,
         headers: {
           'Accept-Language': locale,
-          // لا تضيف Content-Type هنا، لأن FormData ستضيفها تلقائياً
+          "Content-Type": "multipart/form-data"
         },
       });
 
@@ -157,7 +157,7 @@ const CompanyRegisterForm = () => {
 
         // الانتقال إلى الصفحة الرئيسية بعد التسجيل الناجح
         setTimeout(() => {
-          router.push(`/${locale}`);
+          window.location.href = `/${locale}/login`;
         }, 2000);
       } else {
         toast.error(response?.message || t('registration_error'));

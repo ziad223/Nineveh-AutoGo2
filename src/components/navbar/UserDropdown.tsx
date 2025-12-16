@@ -104,7 +104,7 @@ const UserDropdown: React.FC<UserDropdownProps> = ({
           locale === 'ar' ? 'left-0 lg:left-0' : 'right-10 lg:right-0'
         } bg-white shadow-lg rounded-md w-[250px] !z-10 py-3 text-right`}
       >
-        <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-100">
+        <div className="flex md:hidden items-center gap-3 px-5 py-3 border-b border-gray-100">
           <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-primary font-bold">
             {name?.charAt(0).toUpperCase()}
           </div>
@@ -160,17 +160,17 @@ const UserDropdown: React.FC<UserDropdownProps> = ({
               <span className="text-sm font-medium hover:text-primary">{t('orders')}</span>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               onClick={closeDropdown}
               href={`/${locale}/sales`}
               className="  px-5 py-2 flex items-center gap-3"
             >
-              <DollarSign size={20} className='text-primary' text-primary />
+              <DollarSign size={20} className='text-primary'  />
               <span className="text-sm font-medium hover:text-primary">{t('sales')}</span>
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link
               onClick={closeDropdown}
               href={`/${locale}/wallet`}
@@ -179,7 +179,7 @@ const UserDropdown: React.FC<UserDropdownProps> = ({
               <DollarSign size={20} className='text-primary' text-primary />
               <span className="text-sm font-medium hover:text-primary">{t('wallet')}</span>
             </Link>
-          </li>
+          </li> */}
           <li>
             <button
               onClick={(e) => { e.stopPropagation(); setShowLogoutModal(true); }}

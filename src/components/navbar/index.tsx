@@ -19,10 +19,11 @@ interface NavbarProps {
   token?: string;
   bank_account: boolean;
   logo: string;
+  role : string
 }
 
-const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
-  console.log(token);
+const Navbar = ({ token, bank_account, logo , role }: NavbarProps) => {
+  console.log('role' , role);
   
   const [menuOpen, setMenuOpen] = useState(false);
   const [showWalletModal, setShowWalletModal] = useState(false);
@@ -100,13 +101,16 @@ const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
     if (isAuthenticated) {
       return (
         <div className="hidden lg:flex items-center gap-2 relative">
-          <Link
+          {role === 'company' && 
+           <Link
             href={`/${locale}/sellYourTicket`}
             className="h-[54px] rounded-[15px] flex items-center justify-center gap-2 text-sm bg-primary text-[#fff] font-bold px-2"
           >
-            <Image src={ticket} alt="ticket" className="inline-block mr-2" />
+            <Image src={ticket} alt="ticket" className="md:inline-block hidden mr-2  " />
             <span className="text-xs">{t("sellTicket")}</span>
           </Link>
+            }
+         
 
           <div className="relative">
             <button
@@ -118,7 +122,7 @@ const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
                 width={25}
                 height={25.84}
                 alt="user"
-                className="inline-block mr-2"
+                className="inline-block mr-2 min-w-[35px] min-h-[35px]"
               />
               <div>
                 <h4 className="text-[12px] text-[#ADADAD]">{t("welcome")}</h4>
@@ -126,6 +130,8 @@ const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
               </div>
               <FaChevronDown className="text-[#B9B9B9]" />
             </button>
+              
+
             <UserDropdown
               onWalletClick={() => setWalletModalOpen(true)}
               isOpen={dropdownOpen}
@@ -175,18 +181,20 @@ const Navbar = ({ token, bank_account, logo }: NavbarProps) => {
         <div className="flex items-center gap-3 lg:hidden">
           {isAuthenticated ? (
             <>
+              {role === 'company' && 
               <Link
                 href={`/${locale}/sellYourTicket`}
                 onClick={() => setMenuOpen(false)}
                 className="flex rounded-[15px] items-center justify-center gap-1 text-sm bg-primary text-[#fff] font-bold px-2 !py-3"
               >
-                <Image src={ticket} alt="ticket" className="inline-block mr-2" />
+                <Image src={ticket} alt="ticket" className="md:inline-block hidden mr-2" />
                 <span className="text-[10px] lg:text-lg">{t("sellTicket")}</span>
               </Link>
+               }
 
               <div className="relative">
                 <button onClick={handleMobileDropdownToggle}>
-                  <Image src={profileImage} alt="profileImage" width={20} height={20} />
+                  <Image src={profileImage} alt="profileImage" width={20} height={20} className="min-w-[30px] min-h-[30px]" />
                 </button>
 
                 {mobileDropdownOpen && (

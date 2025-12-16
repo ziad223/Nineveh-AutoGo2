@@ -64,7 +64,11 @@ export default async function RootLayout({
 
   console.log(settings, "new wwsetting");
   const cookieStore = cookies();
-  const userDataRaw = cookieStore.get("userDataInfo")?.value;
+const userDataString = cookieStore.get("userDataInfo")?.value;
+const userData = userDataString
+  ? JSON.parse(userDataString)
+  : null;
+const role = userData?.client_type
   const token = cookieStore.get("token")?.value;
 const logo = settings.find((item) => item.key === "logo")?.value;
 
@@ -85,6 +89,7 @@ const logo = settings.find((item) => item.key === "logo")?.value;
             bank_account={settings?.find((item: any) => item.key === "bankAccount")}
             token={token}
             logo = {logo}
+            role = {role}
           />
           {/* <WhatsApp locale={currentLocale}/> */}
           <div className="  ">{children}</div>
