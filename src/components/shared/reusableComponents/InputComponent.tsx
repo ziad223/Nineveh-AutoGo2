@@ -33,7 +33,7 @@ const InputComponent: React.FC<InputComponentProps> = ({
         {...register(name)}
         type={type}
         placeholder={placeholder}
-        className={`bg-[#f5f5f5] w-full md:h-[64px] h-[50px] ${icon ? 'pr-12' : 'pr-5'} pl-4 border rounded-xl outline-none placeholder:text-xs md:placeholder:text-lg transition placeholder:text-[#989898]`}
+        className={`bg-[#f5f5f5] w-full md:h-[64px] h-[50px] ${icon ? 'pr-12' : 'pr-5'} pl-4 border rounded-xl outline-none placeholder:text-xs md:placeholder:text-md transition placeholder:text-[#989898]`}
       />
 
       {error&& <p className='text-red-500'>{error}</p>}

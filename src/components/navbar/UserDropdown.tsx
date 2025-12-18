@@ -143,43 +143,15 @@ const UserDropdown: React.FC<UserDropdownProps> = ({
           <li>
             <Link
               onClick={closeDropdown}
-              href={`/${locale}/my-tickets`}
+              href={`/${locale}/my-services`}
               className="  px-5 py-2 flex items-center gap-3"
             >
               <Ticket size={20} className='text-primary' />
-              <span className="text-sm font-medium hover:text-primary">{locale === 'ar' ? "تذاكري" : "My Tickets"}</span>
+              <span className="text-sm font-medium hover:text-primary">{locale === 'ar' ? "خدماتي" : "My Services"}</span>
             </Link>
           </li>
-          <li>
-            <Link
-              onClick={closeDropdown}
-              href={`/${locale}/orders`}
-              className="  px-5 py-2 flex items-center gap-3"
-            >
-              <ShoppingCart size={20} className='text-primary' />
-              <span className="text-sm font-medium hover:text-primary">{t('orders')}</span>
-            </Link>
-          </li>
-          {/* <li>
-            <Link
-              onClick={closeDropdown}
-              href={`/${locale}/sales`}
-              className="  px-5 py-2 flex items-center gap-3"
-            >
-              <DollarSign size={20} className='text-primary'  />
-              <span className="text-sm font-medium hover:text-primary">{t('sales')}</span>
-            </Link>
-          </li> */}
-          {/* <li>
-            <Link
-              onClick={closeDropdown}
-              href={`/${locale}/wallet`}
-              className="  px-5 py-2 flex items-center gap-3 w-full"
-            >
-              <DollarSign size={20} className='text-primary' text-primary />
-              <span className="text-sm font-medium hover:text-primary">{t('wallet')}</span>
-            </Link>
-          </li> */}
+          
+      
           <li>
             <button
               onClick={(e) => { e.stopPropagation(); setShowLogoutModal(true); }}

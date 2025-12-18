@@ -98,15 +98,36 @@ export default function SellYourService({token} : {token : string}) {
   const [previews, setPreviews] = useState<string[]>([]);
 
   const handleImageChange = (files: FileList) => {
-    const fileArray = Array.from(files);
-    setValue('images', fileArray);
-    
-    // تنظيف المعاينات السابقة
-    previews.forEach(url => URL.revokeObjectURL(url));
-    
-    const previewUrls = fileArray.map(file => URL.createObjectURL(file));
-    setPreviews(previewUrls);
-  };
+  const fileArray = Array.from(files);
+  
+  // الحصول على الصور الحالية
+  const currentImages = control._formValues.images || [];
+  
+  // الحد الأقصى 5 صور
+  const remainingSlots = 5 - currentImages.length;
+  const filesToAdd = fileArray.slice(0, remainingSlots);
+  
+  if (filesToAdd.length === 0) {
+    toast.warning(t('maxImagesWarning') || 'يمكنك رفع حتى 5 صور فقط');
+    return;
+  }
+  
+  // تحديث قيمة images في الفورم
+  const updatedImages = [...currentImages, ...filesToAdd];
+  setValue('images', updatedImages);
+  
+  // تنظيف المعاينات السابقة
+  previews.forEach(url => URL.revokeObjectURL(url));
+  
+  // إنشاء معاينات جديدة للصور المضافة
+  const previewUrls = filesToAdd.map(file => URL.createObjectURL(file));
+  setPreviews([...previews, ...previewUrls]);
+  
+  // تنظيف input file
+  if (fileRef.current) {
+    fileRef.current.value = '';
+  }
+};
 
   const removeImage = (index: number) => {
     const newImages = [...previews];
@@ -120,89 +141,96 @@ export default function SellYourService({token} : {token : string}) {
     setValue('images', updatedImages);
   };
 
-  /* ================= Submit ================= */
-  const onSubmit = async (data: FormValues) => {
-    try {
-      setSubmitting(true);
-      
-      const formData = new FormData();
-      
-      // إضافة جميع الحقول المطلوبة
-      formData.append('catalog_category_id', data.catalog_category_id);
-      formData.append('title[ar]', data.title_ar);
-      formData.append('title[en]', data.title_en);
-      formData.append('content[ar]', data.content_ar);
-      formData.append('content[en]', data.content_en);
-      formData.append('price', data.price);
-      formData.append('phone', data.phone);
-      formData.append('mobile', data.mobile);
-      
-      // إضافة الميزات
-      data.features.forEach((feature, index) => {
-        if (feature.value.trim()) {
-          formData.append(`features[]`, feature.value);
+// ================= Submit =================
+const onSubmit = async (data: FormValues) => {
+  try {
+    setSubmitting(true);
+    
+    const formData = new FormData();
+    
+    // إضافة جميع الحقول المطلوبة
+    formData.append('catalog_category_id', data.catalog_category_id);
+    formData.append('title[ar]', data.title_ar);
+    formData.append('title[en]', data.title_en);
+    formData.append('content[ar]', data.content_ar);
+    formData.append('content[en]', data.content_en);
+    formData.append('price', data.price);
+    formData.append('phone', data.phone);
+    formData.append('mobile', data.mobile);
+    
+    // إضافة الميزات
+    data.features.forEach((feature, index) => {
+      if (feature.value.trim()) {
+        formData.append(`features[${index}]`, feature.value);
+      }
+    });
+    
+    // إضافة الصور بطريقة صحيحة
+    // تأكد من أن data.images موجودة وليست فارغة
+    if (data.images && data.images.length > 0) {
+      // استخدم forEach لإضافة كل صورة
+      data.images.forEach((image, index) => {
+        if (image instanceof File) {
+          formData.append(`images[${index}]`, image); // أو formData.append('images[]', image);
         }
       });
-      
-      // إضافة الصور
-      data.images.forEach((image) => {
-        formData.append('images[]', image);
-      });
-      
-      // تسجيل البيانات للتحقق
-      console.log('Submitting form data:');
-      for (let [key, value] of formData.entries()) {
-        console.log(`${key}:`, value);
-      }
-      
-      // هنا رفع البيانات للخادم
-      const response = await apiServiceCall({
-        url: 'user/create/services', // تأكد من تعديل الرابط حسب API الخاص بك
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Content-Type': 'multipart/form-data',
-           Authorization: `Bearer ${token}`
-        },
-      });
-      
-      if (response.status_code === 200 || response.status_code === 201) {
-        toast.success(t('success'));
-        
-        // إعادة تعيين الفورم
-        reset();
-        setPreviews([]);
-        previews.forEach(url => URL.revokeObjectURL(url));
-        
-        // إعادة ضبط الحقول
-        setValue('features', [{ value: '' }]);
-        setValue('images', []);
-      } else {
-        toast.error(response.message || t('submitError') || 'Failed to submit');
-      }
-      
-    } catch (error: any) {
-      console.error('Error submitting form:', error);
-      
-      // عرض رسالة الخطأ من السيرفر
-      if (error?.data?.message) {
-        toast.error(error.data.message);
-      } else if (error?.data?.errors) {
-        // إذا كان هناك أخطاء تحقق
-        Object.values(error.data.errors).forEach((err: any) => {
-          if (Array.isArray(err)) {
-            err.forEach(msg => toast.error(msg));
-          } else {
-            toast.error(err);
-          }
-        });
-      } else {
-        toast.error(t('submitError') || 'An error occurred while submitting');
-      }
-    } finally {
-      setSubmitting(false);
     }
-  };
+    
+    // تسجيل البيانات للتحقق (للتdebugging فقط)
+    console.log('Submitting form data:');
+    for (let [key, value] of formData.entries()) {
+      console.log(`${key}:`, value, value instanceof File ? `File: ${value.name}` : '');
+    }
+    
+    // هنا رفع البيانات للخادم
+    const response = await apiServiceCall({
+      url: 'user/create/services', // تأكد من تعديل الرابط حسب API الخاص بك
+      method: 'POST',
+      body: formData,
+      headers: {
+          'Content-Type': 'multipart/form-data',
+  
+        Authorization: `Bearer ${token}`
+      },
+    });
+    
+    if (response.status_code === 200 || response.status_code === 201) {
+      toast.success(t('success'));
+      
+      // إعادة تعيين الفورم
+      reset();
+      setPreviews([]);
+      previews.forEach(url => URL.revokeObjectURL(url));
+      
+      // إعادة ضبط الحقول
+      setValue('features', [{ value: '' }]);
+      setValue('images', []);
+    } else {
+      toast.error(response.message || t('submitError') || 'Failed to submit');
+    }
+    
+  } catch (error: any) {
+    console.error('Error submitting form:', error);
+    
+    // عرض رسالة الخطأ من السيرفر
+    if (error?.data?.message) {
+      toast.error(error.data.message);
+    } else if (error?.data?.errors) {
+      // إذا كان هناك أخطاء تحقق
+      Object.values(error.data.errors).forEach((err: any) => {
+        if (Array.isArray(err)) {
+          err.forEach(msg => toast.error(msg));
+        } else {
+          toast.error(err);
+        }
+      });
+    } else {
+      toast.error(t('submitError') || 'An error occurred while submitting');
+    }
+  } finally {
+    setSubmitting(false);
+  }
+};
 
   // تحويل البيانات للـ Select
   const categoryOptions = categories.map(category => ({

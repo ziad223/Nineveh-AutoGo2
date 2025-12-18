@@ -674,6 +674,7 @@
   "image_size_format": "PNG, JPG, JPEG (بحد أقصى 2MB)",
   "create_account_button": "إنشاء حساب كشركة",
   "sellService": {
+    "submitting" : "جاري نشر الخدمة",
     "title": "بيع خدمتك",
     "category": "اختر القسم",
     "categoryId": "معرف القسم",
@@ -698,5 +699,59 @@
     "contentEnPlaceholder" : "وصف الخدمة بالأنجليزي"
   },
   "commercial_register_placeholder" : "السجل التجاري",
-  "company_bio_placeholder" : "نبذة عن الشركة"
+  "company_bio_placeholder" : "نبذة عن الشركة",
+  "services": {
+    "publishedServices": "الخدمات المنشورة",
+    "noServices": "لا توجد خدمات مضافة حاليًا",
+    "currency": "ريال",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "editService": "تعديل الخدمة",
+    "deleteService": "حذف الخدمة",
+    "deleteConfirm": "هل أنت متأكد أنك تريد حذف هذه الخدمة؟",
+    "title": "عنوان الخدمة",
+    "description": "وصف الخدمة",
+    "price": "السعر",
+    "cancel": "إلغاء",
+    "save": "حفظ التعديلات",
+    "confirmDelete": "تأكيد الحذف"
+  },
+   "profile": {
+    "editTitle": "تعديل بياناتي",
+    "editSubtitle": "يمكنك تعديل بيانات حسابك",
+    "companyName": "اسم الشركة",
+  "commercialRegister": "السجل التجاري",
+  "companyBio": "نبذة عن الشركة",
+  "currentPassword": "كلمة المرور الحالية",
+  "newPassword": "كلمة المرور الجديدة",
+  "confirmPassword": "تأكيد كلمة المرور",
+  "save": "حفظ التعديلات",
+  "updateSuccess": "تم تحديث البيانات بنجاح",
+  "updateError": "حدث خطأ أثناء التحديث",
+  "phone" : "رقم الجوال",
+  "profileImage" : "صورة البروفايل",
+  "email" :"البريد الإلكتروني",
+    "city" : "المدينة",
+    "name" : "الأسم",
+  "passwordChangeNote": "بعد تغيير كلمة المرور بنجاح، سيتم تسجيل خروجك من جميع الأجهزة وإعادة توجيهك إلى صفحة تسجيل الدخول.",
+    "changePassword": "تغيير كلمة المرور",
+    "clickToChangePassword": "انقر لتحديث كلمة المرور الخاصة بك",
+    "enterCurrentPassword": "أدخل كلمة المرور الحالية",
+    "enterNewPassword": "أدخل كلمة المرور الجديدة",
+    "confirmNewPassword": "أعد إدخال كلمة المرور الجديدة",
+    "passwordChangeSuccess": "تم تغيير كلمة المرور بنجاح",
+    "passwordChangeError": "حدث خطأ أثناء تغيير كلمة المرور",
+    "updatePasswordInstructions": "قم بإدخال كلمة المرور الحالية والجديدة",
+    "passwordRequirements": "متطلبات كلمة المرور:",
+    "passwordRequirement1": "8 أحرف على الأقل",
+    "passwordRequirement2": "تحتوي على أحرف كبيرة وصغيرة",
+    "passwordRequirement3": "تحتوي على رقم واحد على الأقل",
+    "changing": "جاري التغيير...",
+    "clickToChangeImage": "انقر لتغيير الصورة",
+    "recommendedSize": "الحجم الموصى به: 500×500 بكسل",
+    "cancel" :"إلغاء"
+
+ 
+  }
+  
 }

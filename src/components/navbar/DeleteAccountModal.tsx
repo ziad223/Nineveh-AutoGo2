@@ -30,7 +30,7 @@ const DeleteAccountModal: React.FC<DeleteAccountModalProps> = ({
       try {
         const response = await apiServiceCall({
           method: 'get',
-          url: 'user/profile',
+          url: 'auth/logout',
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -104,14 +104,14 @@ const DeleteAccountModal: React.FC<DeleteAccountModalProps> = ({
           >
             &times;
           </button>
-          <h2 className="text-xl font-bold text-[#EB2302] mb-4">
+          <h2 className="text-xl font-bold text-primary mb-4">
             {t('title')}
           </h2>
           <p className="text-gray-600 mb-6">{t('description')}</p>
           <div className="flex flex-col justify-center gap-4">
             <button
               onClick={handleDelete}
-              className="bg-[#EB2302] flex items-center justify-center gap-2 h-[63.5px] text-white px-4 py-2 rounded"
+              className="bg-primary flex items-center justify-center gap-2 h-[63.5px] text-white px-4 py-2 rounded"
             >
               <Image src={img} alt={t('removeAlt')} />
               {t('deleteButton')}

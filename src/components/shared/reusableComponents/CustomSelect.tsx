@@ -59,7 +59,7 @@ export default function CustomSelect({
             <Select onValueChange={field.onChange} value={field.value}>
               <SelectTrigger
                 className={`
-                  btn-select bg-[#f5f5f5] w-full md:h-[64px] h-[50px]  ${icon ? 'pr-12' : 'pr-5' }  pl-4 border rounded-xl
+                  btn-select bg-[#f5f5f5] outline-none w-full md:h-[64px] h-[50px]  ${icon ? 'pr-12' : 'pr-5' }  pl-4 border rounded-xl
                   outline-none transition placeholder:text-[#989898]  text-xs md:text-lg
                   text-right relative
                 `}

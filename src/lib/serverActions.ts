@@ -58,6 +58,25 @@ export const getProfile = async (lang: string) => {
     errorsHandling(error, lang);
   }
 };
+export const getMyServices = async (lang: string) => {
+  try {
+    const cookieStore = cookies();
+    const token = cookieStore.get("token")?.value; 
+
+    const data = await apiServiceCall({
+      url: `user/services`,
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+        "Accept-Language": lang,
+      },
+    });
+    return data;
+  } catch (error) {
+    errorsHandling(error, lang);
+  }
+};
 
 export const getHomeData = async (lang: string) => {
   try {

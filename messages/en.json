@@ -682,6 +682,7 @@
   "image_size_format": "PNG, JPG, JPEG (Max 2MB)",
   "create_account_button": "Create Company Account",
    "sellService": {
+    "Submitting" : "",
     "title": "Sell Your Service",
     "category": "Select Category",
     "categoryId": "Category ID",
@@ -704,5 +705,58 @@
     "contentRequired": "Content is required"
   },
     "commercial_register_placeholder" : " Commercial Register",
-  "company_bio_placeholder" : "Company Bio"
+  "company_bio_placeholder" : "Company Bio",
+  "services": {
+    "publishedServices": "Published Services",
+    "noServices": "No services available at the moment",
+    "currency": "SAR",
+    "edit": "Edit",
+    "delete": "Delete",
+    "editService": "Edit Service",
+    "deleteService": "Delete Service",
+    "deleteConfirm": "Are you sure you want to delete this service?",
+    "title": "Service Title",
+    "description": "Service Description",
+    "price": "Price",
+    "cancel": "Cancel",
+    "save": "Save Changes",
+    "confirmDelete": "Confirm Delete"
+  },
+    "profile": {
+    "editTitle": "Edit Profile",
+    "editSubtitle": "You can update your account information",
+    "companyName": "Company Name",
+    "commercialRegister": "Commercial Register",
+    "companyBio": "Company Bio",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "save": "Save Changes",
+    "updateSuccess": "Profile updated successfully",
+    "updateError": "An error occurred while updating",
+    "phone": "Mobile Number",
+    "profileImage": "Profile Image",
+    "email": "Email Address",
+    "city" : "City",
+    "changePassword": "Change Password",
+    "clickToChangePassword": "Click to update your password",
+    "enterCurrentPassword": "Enter current password",
+    "enterNewPassword": "Enter new password",
+    "confirmNewPassword": "Re-enter new password",
+    "passwordChangeSuccess": "Password changed successfully",
+    "passwordChangeError": "Error changing password",
+    "updatePasswordInstructions": "Enter current and new passwords",
+    "passwordRequirements": "Password Requirements:",
+    "passwordRequirement1": "At least 8 characters",
+    "passwordRequirement2": "Contains uppercase and lowercase letters",
+    "passwordRequirement3": "Contains at least one number",
+    "changing": "Changing...",
+    "clickToChangeImage": "Click to change image",
+    "recommendedSize": "Recommended size: 500×500 pixels",
+    "cancel":"Cancel",
+        "name" : "Name",
+          "passwordChangeNote": "After successfully changing your password, you will be logged out from all devices and redirected to the login page."
+
+
+  }
 }

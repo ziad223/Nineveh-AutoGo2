@@ -1,14 +1,28 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-export async function GET() {
-  const response = NextResponse.json({ message: 'Logged out' });
+export async function POST() {
+  const response = NextResponse.json({ message: "Logged out" });
 
-  // Remove the 'token' cookie by clearing its value and setting an expired date
-  response.cookies.set('token', '', {
+  response.cookies.set("token", "", {
     httpOnly: true,
     secure: true,
-    path: '/',
-    expires: new Date(0), // This removes it
+    path: "/",
+    expires: new Date(0),
+  });
+
+  response.cookies.set("userDataInfo", "", {
+    path: "/",
+    expires: new Date(0),
+  });
+
+  response.cookies.set("userId", "", {
+    path: "/",
+    expires: new Date(0),
+  });
+
+  response.cookies.set("userType", "", {
+    path: "/",
+    expires: new Date(0),
   });
 
   return response;
