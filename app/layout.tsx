@@ -22,7 +22,7 @@ export async function generateMetadata({
   return {
     title: isAr
       ? "نينوى | منصة خدمات سيارات متنقلة"
-      : "Nineveh | Mobile Car Services Platform",
+      : "Nineveh |  Car Services Platform",
 
     description: isAr
       ? "نينوى منصة متكاملة لتقديم خدمات السيارات المتنقلة بسهولة وسرعة"
