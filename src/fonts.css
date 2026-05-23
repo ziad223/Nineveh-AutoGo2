@@ -1,0 +1,47 @@
+/* Black */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* ExtraBold */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Thin */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Thin.otf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Heavy */
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('/font/ArbFONTS-Loew-Next-Arabic-Heavy.otf') format('truetype');
+  font-weight: 950;
+  font-style: normal;
+}

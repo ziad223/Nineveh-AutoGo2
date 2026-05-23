@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif !important;
+}
+.input_color {
+  padding: 19px 16px;
+}
+.input_color::placeholder {
+  color: #b7b7b7;
+  /* border-radius: 12px; */
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* .css-t3ipsp-control {
+    border-color: red !important;
+    box-shadow: none !important;
+} */
+
+/* .select_styles .css-tj5bde-Svg {
+    color: red !important;
+} */
+/* .select_styles .css-16nthox-control {
+    padding: 7px;
+    border-radius: 8px;
+
+} */
+/* .select_styles .css-1u9des2-indicatorSeparator {
+    background-color: red !important;
+    display: none !important;
+} */
+
+.react-tel-input .form-control {
+  height: 40px;
+  z-index: 0;
+  width: 100% !important;
+  border-radius: 10px;
+  border-color: rgb(199, 198, 198);
+}
+.react-tel-input .form-control {
+  width: 100% !important;
+}
+
+.react-tel-input .selected-flag {
+  background-color: white;
+}
+.react-tel-input {
+  width: 100% !important;
+}
+.btn {
+  border-radius: 10px !important;
+}
+
+.react-international-phone-input-container .react-international-phone-input {
+  width: 100% !important;
+  padding: 19px 16px !important;
+  background-color: #f5f5f5 !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+.react-international-phone-input-container
+  .react-international-phone-country-selector-button {
+  padding: 19px 16px;
+  background-color: #f5f5f5 !important;
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+.react-tel-input .selected-flag {
+  background-color: white;
+}
+
+/* button */
+.btn {
+  padding: 20px 60px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  cursor: pointer;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  border-radius: 4px;
+  background-color: white;
+  z-index: -1;
+  transition: 200ms;
+}
+.btn::after {
+  content: attr(data);
+  font-size: 16px;
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 200ms;
+}
+.btn:hover::before {
+  opacity: 50%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.btn:hover::after {
+  color: white;
+}
+
+
