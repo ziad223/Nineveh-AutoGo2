@@ -30,7 +30,7 @@ const Navbar = ({ token,  logo , role , notificationsUnReadCount }: NavbarProps)
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [name, setName] = useState<string | undefined>("");
-  const [profileImage, setProfileImage] = useState<string | undefined>("");
+const [profileImage, setProfileImage] = useState<string>("");
   const locale = useLocale();
   const t = useTranslations("navbar");
 
@@ -132,11 +132,11 @@ const Navbar = ({ token,  logo , role , notificationsUnReadCount }: NavbarProps)
               onClick={() => setDropdownOpen((prev) => !prev)}
             >
               <Image
-                src={profileImage || undefined}
+          src={profileImage || navUser}
                 width={25}
                 height={25.84}
                 alt="user"
-                className="inline-block mr-2 min-w-[35px] min-h-[35px]"
+                className="inline-block mr-2 max-w-[40px] max-h-[40px]"
               />
               <div>
                 <h4 className="text-[12px] text-[#ADADAD]">{t("welcome")}</h4>

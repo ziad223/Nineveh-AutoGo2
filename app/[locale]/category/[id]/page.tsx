@@ -27,12 +27,15 @@ interface CategoryResponse {
 }
 
 interface Props {
-  params: { id: string };
-  searchParams?: { lang?: string };
+  params: {
+    id: string;
+    locale: string;
+  };
+  searchParams?: Record<string, string>;
 }
 
-export default async function CategoryPage({ params, searchParams }: Props) {
-  const lang = searchParams?.lang;
+export default async function CategoryPage({ params }: Props) {
+  const lang = params.locale;
   const respone: CategoryResponse = await getSingleCategory(lang, params.id);
   const category = respone.data.category;
   const services = respone.data.services;

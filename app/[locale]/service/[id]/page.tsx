@@ -16,17 +16,15 @@ interface ServiceResponse {
 }
 
 interface Props {
-  params: { id: string; locale?: string };
-  searchParams?: { lang?: string };
+  params: { id: string; locale: string };
 }
 
 
 
 export default async function ServiceDetailsPage({
   params,
-  searchParams,
 }: Props) {
-  const lang = searchParams?.lang || "ar";
+  const lang = params.locale;
   const t = await getTranslations('serviceDetails')
   const response: { data: ServiceResponse } =
     await getSingleService(lang, params.id);
