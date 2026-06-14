@@ -5,6 +5,7 @@ import Image from 'next/image'
 // استدعاء دالة جلب المقالات
 import { getBlogPosts } from '../../../src/lib/serverActions'
 import { getTranslations } from 'next-intl/server'
+import Container from '../../../src/components/shared/container'
 
 interface BlogPost {
   id: number
@@ -57,7 +58,7 @@ const BlogPage = async ({ params, searchParams }: BlogPageProps) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <div className="container mx-auto px-4">
+      <Container>
         {/* عنوان الصفحة */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
@@ -90,7 +91,7 @@ const BlogPage = async ({ params, searchParams }: BlogPageProps) => {
         ) : (
           <EmptyState t={t} />
         )}
-      </div>
+      </Container>
     </div>
   )
 }

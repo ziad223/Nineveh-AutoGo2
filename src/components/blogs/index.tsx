@@ -4,6 +4,7 @@ import BlogCard from './BlogCard';
 import { getBlogPosts } from '../../lib/serverActions';
 import { getTranslations } from "next-intl/server";
 import Link from 'next/link';
+import Container from '../shared/container';
 
 interface AllBlogsProps {
   locale: string;
@@ -29,7 +30,7 @@ const Blogs = async ({ locale }: AllBlogsProps) => {
   const displayedBlogs = blogs.slice(0, 6);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <Container className="py-8">
 
       {/* العنوان */}
       <div className="text-center mb-10">
@@ -61,7 +62,7 @@ const Blogs = async ({ locale }: AllBlogsProps) => {
         </div>
       )}
 
-    </div>
+    </Container>
   );
 };
 

@@ -1,5 +1,6 @@
 import { getSingleBlogPost } from "../../../../src/lib/serverActions";
 import Image from "next/image";
+import Container from "../../../../src/components/shared/container";
 
 interface PageProps {
   params: {
@@ -17,7 +18,7 @@ export default async function BlogDetailsPage({ params }: PageProps) {
   if (!blog) return <div>Not Found</div>;
 
   return (
-    <div className="container mx-auto py-10 px-4">
+    <Container className="py-10">
       
      
 
@@ -37,6 +38,6 @@ export default async function BlogDetailsPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: blog.content }}
       />
 
-    </div>
+    </Container>
   );
 }
