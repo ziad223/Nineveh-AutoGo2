@@ -20,13 +20,69 @@ export async function generateMetadata({
   const isAr = params.locale === "ar";
    
   return {
-    title: isAr
-      ? "نينوى | منصة خدمات سيارات متنقلة"
-      : "Nineveh |  Car Services Platform",
-
+    title: {
+      default: isAr
+        ? "نينوى | منصة خدمات سيارات متنقلة"
+        : "Nineveh | Car Services Platform",
+      template: isAr ? "%s | نينوى" : "%s | Nineveh",
+    },
     description: isAr
-      ? "نينوى منصة متكاملة لتقديم خدمات السيارات المتنقلة بسهولة وسرعة"
-      : "Nineveh is a comprehensive platform for mobile car services",
+      ? "نينوى منصة متكاملة لتقديم خدمات السيارات المتنقلة بسهولة وسرعة في الإمارات. نوفر خدمات غسيل سيارات، صيانة، وتلميع أينما كنت."
+      : "Nineveh is a comprehensive platform for mobile car services in the UAE. We provide car wash, maintenance, and detailing services wherever you are.",
+    keywords: isAr 
+      ? "نينوى, غسيل سيارات متنقل, صيانة سيارات, تلميع سيارات, خدمات سيارات الامارات, Nineveh, AutoGo" 
+      : "Nineveh, Mobile car wash, car maintenance, car detailing, UAE car services, AutoGo",
+    authors: [{ name: "Nineveh AutoGo" }],
+    creator: "Nineveh AutoGo",
+    publisher: "Nineveh AutoGo",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL("https://ninevehautogo.com"),
+    alternates: {
+      canonical: "/",
+      languages: {
+        "en-US": "/en",
+        "ar-AE": "/ar",
+      },
+    },
+    openGraph: {
+      title: isAr
+        ? "نينوى | منصة خدمات سيارات متنقلة"
+        : "Nineveh | Car Services Platform",
+      description: isAr
+        ? "نينوى منصة متكاملة لتقديم خدمات السيارات المتنقلة بسهولة وسرعة"
+        : "Nineveh is a comprehensive platform for mobile car services",
+      url: "https://ninevehautogo.com",
+      siteName: "Nineveh AutoGo",
+      locale: isAr ? "ar_AE" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: isAr
+        ? "نينوى | منصة خدمات سيارات متنقلة"
+        : "Nineveh | Car Services Platform",
+      description: isAr
+        ? "نينوى منصة متكاملة لتقديم خدمات السيارات المتنقلة بسهولة وسرعة"
+        : "Nineveh is a comprehensive platform for mobile car services",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    verification: {
+      google: "-uRAJRVde8Ojd1vjq5SKDtx8q66xb4lezHxnhj9DCl8",
+    },
   };
 }
 
@@ -47,9 +103,6 @@ export default async function RootLayout({
       dir={currentLocale === "ar" ? "rtl" : "ltr"}
       suppressHydrationWarning
     >
-      <head>
-        <title>{isAr ? "منصة خدمات سيارات متنقلة" : "Mobile Car Services Platform"}</title>
-      </head>
       <body
         className={`min-h-screen`}
         suppressHydrationWarning
